@@ -1,85 +1,37 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+  <AppLoader v-if="showLoader" />
+  <component v-else :is="$route.meta.layoutComponent">
+    <RouterView />
+  </component>
 </template>
 
+<script setup lang="ts">
+import { ref, onMounted } from 'vue';
+import AppLoader from './components/shared/AppLoader.vue';
+import { shouldShowAppLoader, setShowAppLoader } from './utils/helpers';
+import { APP_LOADER_DURATION } from './utils/constants';
+
+const showLoader = ref(false);
+
+// Function to handle the display of the loader
+const handleLoaderDisplay = () => {
+  if (shouldShowAppLoader()) {
+    showLoader.value = true;
+
+    // Hide the loader after a delay
+    setTimeout(() => {
+      showLoader.value = false;
+      setShowAppLoader(new Date().getTime()); // Update last shown time
+    }, APP_LOADER_DURATION); // Adjust the duration based on actual use case
+  }
+};
+
+// On mount, check if the loader should be displayed
+onMounted(() => {
+  handleLoaderDisplay();
+});
+</script>
+
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-}
+/* Add your styles here */
 </style>

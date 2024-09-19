@@ -1,35 +1,115 @@
-@import './base.css';
+/* Normalize.css for better cross-browser consistency */
+@import 'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css';
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+@layer base {
+  @font-face {
+    font-family: 'Orbitron';
+    src: url('@/assets/fonts/Orbitron-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
   }
-}
 
-@media (min-width: 1024px) {
+  @font-face {
+    font-family: 'Orbitron';
+    src: url('@/assets/fonts/Orbitron-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Orbitron';
+    src: url('@/assets/fonts/Orbitron-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Orbitron';
+    src: url('@/assets/fonts/Orbitron-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Orbitron';
+    src: url('@/assets/fonts/Orbitron-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Orbitron';
+    src: url('@/assets/fonts/Orbitron-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+  }
+
   body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+    @apply text-gray-nurse bg-aztec;
   }
 }
+
+
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global font */
+body {
+  font-family: 'Orbitron', sans-serif;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Global Colors */
+:root {
+  --primary-color: #42b983;
+  --secondary-color: #35495e;
+}
+
+
+
+/* Color Theme:
+Primary Color (for key elements and highlights):
+
+Deep Blue: #003366
+Conveys professionalism and trust. It’s a strong, deep color that can help highlight key sections of your portfolio.
+Secondary Color (for accents and interactive elements):
+
+Vibrant Cyan: #00BFFF
+Provides high contrast with the deep blue and adds a modern, tech-savvy feel. It’s perfect for buttons, links, and highlights.
+Background Color (for main background):
+
+Charcoal Black: #1C1C1C
+Creates a dark, sleek backdrop that allows other colors to pop and provides a professional look.
+Text Color (for primary text):
+
+Light Gray: #E0E0E0
+Ensures readability against the dark background while maintaining a clean and modern aesthetic.
+Accent Color (for secondary elements or emphasis):
+
+Silver: #C0C0C0
+Adds contrast and can be used for borders, subtle highlights, or secondary text, keeping the overall look professional.
+Error/Warning Color (for alerts and notifications):
+
+Bright Red: #FF4C4C
+Stands out against the dark tones and grabs attention for critical alerts or errors.
+Success Color (for positive messages or confirmations):
+
+Lime Green: #32CD32
+Provides a vibrant contrast for success messages and confirmations, maintaining a clean and professional look.
+Usage Tips:
+Primary Color (Deep Blue): Use for headers, major sections, and important call-to-action buttons. It anchors your portfolio and highlights your expertise.
+Secondary Color (Vibrant Cyan): Apply it to links, hover effects, and smaller accent elements to draw attention and provide interactive feedback.
+Background Color (Charcoal Black): Use this for the main background to make sure your content and highlights stand out.
+Text Color (Light Gray): For readability of your content. Use different shades if necessary for headings and body text.
+Accent Color (Silver): Ideal for borders, icons, and subtle highlights.
+Error/Warning Color (Bright Red): Use sparingly to highlight errors or important warnings.
+Success Color (Lime Green): For success messages or confirmations. */
