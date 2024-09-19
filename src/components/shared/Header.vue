@@ -61,17 +61,26 @@
 
         <!-- Right Section: Minimize and Close Buttons -->
         <div class="h-full flex items-center space-x-2">
-            <button class="w-3 h-3 rounded-full bg-yellow-400 hover:bg-yellow-300" title="Minimize"></button>
-            <button class="w-3 h-3 rounded-full bg-red-500 hover:bg-red-400" title="Close"></button>
+            <button title="Minimize">
+                <Icon icon="mdi:window-minimize" class="size-6 block text-gray-nurse" />
+
+            </button>
+            <button title="Close">
+                <Icon icon="mdi:close" class="size-6 block text-gray-nurse" />
+            </button>
         </div>
     </header>
 </template>
 
 <script lang="ts">
 import { companyInfo } from '@/utils/constants';
+import { Icon } from '@iconify/vue';
 
 export default {
     name: 'Header',
+    components: {
+        Icon
+    },
     data() {
         return {
             companyInfo // You can use it directly in the template
