@@ -5,7 +5,7 @@
         { ' bg-gray-bg font-bold text-dimmest-text transform hover:scale-95': variant === ButtonVariants.TypeWriter },
         { ' bg-transparent text-dimmest-text hover:text-maroon-hl': variant === ButtonVariants.Flat },
         { ' font-bold text-maroon-hl': variant === ButtonVariants.Flat && isActive },
-        { ' bg-blue-hl hover:bg-maroon-hl font-bold text-dimmest-text': variant === ButtonVariants.FlatFilled },
+        { ' bg-blue-hl hover:bg-maroon-hl font-bold text-dimmest-text px-2': variant === ButtonVariants.FlatFilled },
 
     ]" :disabled="isDisabled" @click="onClick">
         <div v-if="variant === ButtonVariants.TypeWriter" :class="[

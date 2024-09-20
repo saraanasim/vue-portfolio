@@ -1,7 +1,7 @@
 <template>
   <div class="w-full h-screen flex flex-col">
     <LayoutHeader />
-    <main class="w-full h-full">
+    <main class="w-full h-full max-w-screen-2xl mx-auto">
       <slot></slot>
     </main>
     <LayoutFooter />

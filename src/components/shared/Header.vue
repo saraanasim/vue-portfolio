@@ -78,44 +78,37 @@
             </p>
         </div>
 
-        <div class="hidden h-full flex-1 lg:flex justify-center">
-            <button title="About Me">
-                INFO
-            </button>
-            <button title="PROJECTS">
-                PROJECTS
-            </button>
-            <button title="EXPERIMENTS">
-                EXPERIMENTS
-            </button>
-            <button title="ARTICLES">
-                ARTICLES
-            </button>
-            <button title="CONNECT">
-                CONNECT
-            </button>
+        <div class="hidden h-full flex-1 lg:flex">
+            <div class="w-fit flex gap-8 ml-8">
+                <BaseButton>INFO</BaseButton>
+                <BaseButton>PROJECTS</BaseButton>
+                <BaseButton>EXPERIMENTS</BaseButton>
+                <BaseButton>ARTICLES</BaseButton>
+                <BaseButton>CONNECT</BaseButton>
+            </div>
         </div>
 
         <!-- Right Section: Login and Logout Buttons -->
         <div class="h-full flex items-center gap-2 bg-blue-hl font-bold">
-            <button title="Login">
-                LOGIN
-            </button>
+            <BaseButton :variant="ButtonVariants.FlatFilled">Login</BaseButton>
         </div>
     </header>
 </template>
 
 <script lang="ts">
-import { companyInfo } from '@/utils/constants';
+import { ButtonVariants, companyInfo } from '@/utils/constants';
 import { Icon } from '@iconify/vue';
+import BaseButton from './BaseButton.vue';
 
 export default {
     name: 'Header',
     components: {
-        Icon
+        Icon,
+        BaseButton
     },
     data() {
         return {
+            ButtonVariants,
             companyInfo // You can use it directly in the template
         };
     }
