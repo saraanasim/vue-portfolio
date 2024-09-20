@@ -1,10 +1,9 @@
 <template>
-    <header
-        class="w-full h-16 flex items-center justify-between p-3 bg-elephant-light text-white border-b border-gray-800">
+    <header class="w-full h-16 flex items-center justify-between p-3 bg-lr-blue-hl text-white-text">
         <!-- Left Section: Logo and Company Name -->
         <div class="h-full flex items-center gap-2">
-            <div class="bg-gray-nurse">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496" class="w-12 h-12 text-elephant-light">
+            <div class="bg-white-text">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496" class="w-12 h-12 text-lr-blue-hl">
                     <path fill="currentColor" opacity="1" stroke="none" d="
                     M277.000000,497.000000 
                     C184.666687,497.000000 92.833374,497.000000 1.000049,497.000000 
@@ -52,7 +51,7 @@
                     z" />
                 </svg>
             </div>
-            <div class="h-full w-1 bg-eastern-blue" />
+            <div class="h-full w-1 bg-lt-blue-hl" />
             <div class="flex flex-col justify-start">
                 <span class="text-lg font-bold">{{ companyInfo.name }}</span>
                 <span class="text-xs">{{ companyInfo.slogan }}</span>
@@ -62,11 +61,45 @@
         <!-- Right Section: Minimize and Close Buttons -->
         <div class="h-full flex items-center space-x-2">
             <button title="Minimize">
-                <Icon icon="mdi:window-minimize" class="size-6 block text-gray-nurse" />
+                <Icon icon="mdi:window-minimize" class="size-6 block" />
 
             </button>
             <button title="Close">
-                <Icon icon="mdi:close" class="size-6 block text-gray-nurse" />
+                <Icon icon="mdi:close" class="size-6 block" />
+            </button>
+        </div>
+    </header>
+    <header class="w-full h-16 flex gap-2 items-center justify-between p-3 text-dimmest-text border-b-2 border-blue-hl">
+        <!-- Left Section: Access -->
+        <div
+            class="h-full w-fit px-2 md:px-4 lg:w-1/3 flex items-center gap-2 bg-blue-hl text-center font-bold text-xs md:text-sm">
+            <p class="w-full">
+                REMOTE-ACCESS - SECURE CONNECTION
+            </p>
+        </div>
+
+        <div class="hidden h-full flex-1 lg:flex justify-center">
+            <button title="About Me">
+                INFO
+            </button>
+            <button title="PROJECTS">
+                PROJECTS
+            </button>
+            <button title="EXPERIMENTS">
+                EXPERIMENTS
+            </button>
+            <button title="ARTICLES">
+                ARTICLES
+            </button>
+            <button title="CONNECT">
+                CONNECT
+            </button>
+        </div>
+
+        <!-- Right Section: Login and Logout Buttons -->
+        <div class="h-full flex items-center gap-2 bg-blue-hl font-bold">
+            <button title="Login">
+                LOGIN
             </button>
         </div>
     </header>

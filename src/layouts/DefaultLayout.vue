@@ -1,9 +1,11 @@
 <template>
-  <LayoutHeader />
-  <main>
-    <slot></slot>
-  </main>
-  <LayoutFooter />
+  <div class="w-full h-screen flex flex-col">
+    <LayoutHeader />
+    <main class="w-full h-full">
+      <slot></slot>
+    </main>
+    <LayoutFooter />
+  </div>
 </template>
 
 <script lang="ts">

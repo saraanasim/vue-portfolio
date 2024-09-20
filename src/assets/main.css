@@ -49,10 +49,17 @@
   }
 
   body {
-    @apply text-gray-nurse bg-aztec;
+    @apply text-dimmest-text bg-black-bg;
   }
 }
 
+@media (max-width: 640px) {
+
+  /* Applies to mobile screens */
+  body {
+    font-size: 87.5% !important;
+  }
+}
 
 /* Base styles */
 * {

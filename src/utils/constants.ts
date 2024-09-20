@@ -7,6 +7,12 @@ export enum LoaderSizes {
     LARGE = 'var(--loader-size-large)'
 }
 
+export enum ButtonVariants {
+    TypeWriter = 'TypeWriter',
+    FlatFilled = 'FlatFilled',
+    Flat = 'Flat',
+}
+
 export const companyInfo = {
     name: "Saraan Techworks",
     slogan: "Innovative Solutions for Your Tech Challenges",

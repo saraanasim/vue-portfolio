@@ -16,23 +16,20 @@ export default {
         black: 900,
       },
       colors: {
-        // Neutral Colors
-        'gray-nurse': '#f2f3f2',
-        'aztec': '#080f11',
-        'outer-space': '#283839',
-        'finlandia': '#5e625e',
+        //Background Colors
+        'black-bg': '#050505',
+        'gray-bg': '#2d2d2d',
 
-        // Primary Colors
-        'eastern-blue': '#24b1b1',
-        'denim': '#1373ab',
-        
-        // Accent Colors
-        'cinnabar': '#e65935',
-        'atoll': '#0b6570',
+        //Text colors
+        'white-text': '#e4e4e4',
+        'dim-text': '#b4b4b4',
+        'dimmest-text': '#9fa1a2',
 
-        // Background Colors
-        'elephant-dark': '#0b2a38',
-        'elephant-light': '#144759',
+        //Highlight colors
+        'lt-blue-hl': '#88d7ec',
+        'lr-blue-hl': '#296b85',
+        'blue-hl': '#2f5668',
+        'maroon-hl': '#822301'
       },
     },
   },
