@@ -50,6 +50,7 @@
 
   body {
     @apply text-dimmest-text bg-black-bg;
+    @apply bg-gradient-to-t from-lr-blue-hl/15 to-black-bg;
   }
 }
 

@@ -1,6 +1,6 @@
 <template>
-    <div class="w-full h-full p-2 sm:p-4">
-        <div class="grid grid-cols-1 lg:grid-cols-3">
+    <div class="w-full h-full flex flex-col gap-4 px-2 sm:px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
             <div class="col-span-1 flex justify-center">
                 <img src="/src/assets/logos/logo-text.png" alt="Saraan Techworks Logo"
                     class="object-contain w-full h-full max-w-sm" />
@@ -22,7 +22,9 @@
                 </div>
             </div>
         </div>
-        <slot></slot>
+        <div class="flex-1">
+            <slot></slot>
+        </div>
     </div>
 </template>
 

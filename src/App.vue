@@ -10,7 +10,6 @@ import { ref, onMounted } from 'vue';
 import AppLoader from './components/shared/AppLoader.vue';
 import { shouldShowAppLoader, setShowAppLoader } from './utils/helpers';
 import { APP_LOADER_DURATION } from './utils/constants';
-
 const showLoader = ref(false);
 
 // Function to handle the display of the loader
