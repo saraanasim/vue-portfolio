@@ -14,10 +14,10 @@
                             {{ title }}
                         </span>
                     </div>
+                    <!-- Buttons Slot -->
                     <div class="col-span-2 lg:col-span-1 flex gap-2">
-                        <BaseButton :variant="ButtonVariants.TypeWriter" :isActive="true">Connect</BaseButton>
-                        <BaseButton :variant="ButtonVariants.TypeWriter">Upload</BaseButton>
-                        <BaseButton :variant="ButtonVariants.TypeWriter">Download</BaseButton>
+                        <slot name="buttons">
+                        </slot>
                     </div>
                 </div>
             </div>

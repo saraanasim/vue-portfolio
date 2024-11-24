@@ -29,7 +29,8 @@ export default {
         'lt-blue-hl': '#88d7ec',
         'lr-blue-hl': '#296b85',
         'blue-hl': '#2f5668',
-        'maroon-hl': '#822301'
+        'maroon-hl': '#822301',
+        'green-hl':'#86b81b'
       },
     },
   },

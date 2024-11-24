@@ -26,3 +26,31 @@ export const shouldShowAppLoader = (): boolean => {
     // Otherwise, do not show the loader
     return false;
 };
+
+
+type FormatOption = 'date' | 'time' | 'both';
+
+export function getFormattedDateTime(format: FormatOption) {
+    const now = new Date();
+
+    const day = String(now.getDate()).padStart(2, '0');
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const year = now.getFullYear();
+
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+
+    const date = `${day}.${month}.${year}`;
+    const time = `${hours}.${minutes}.${seconds}`;
+
+    switch (format) {
+        case 'date':
+            return date;
+        case 'time':
+            return time;
+        case 'both':
+        default:
+            return `${date} ${time}`;
+    }
+}

@@ -1,33 +1,51 @@
 <template>
     <SectionContainer title="/ARCHIVES/ASSET/INFO">
-        <div class="w-full h-full flex">
+        <template #buttons>
+            <BaseButton :variant="ButtonVariants.TypeWriter" :isActive="true">Connect</BaseButton>
+            <BaseButton :variant="ButtonVariants.TypeWriter">Upload</BaseButton>
+            <BaseButton :variant="ButtonVariants.TypeWriter">Download</BaseButton>
+        </template>
+        <div class="w-full h-full flex lg:max-h-[500px]">
             <div class="h-full w-4 border-y-2 border-l-2 border-dimmest-text"></div>
             <div class="w-full grid grid-cols-3 gap-2">
-                <div class="col-span-3 lg:col-span-2 flex flex-col border-t-4 border-maroon-hl">
-                    <div>Icon</div>
+                <div class="col-span-3 lg:col-span-2 flex flex-col justify-center border-t-4 border-maroon-hl">
                     <AssetImage imageSrc="/src/assets/images/saraan-1.png" />
-
                 </div>
-                <div class="col-span-3 lg:col-span-1 ">Right Stats saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                <div class="col-span-3 lg:col-span-1 overflow-y-auto">
+                    <div class="grid grid-cols-2 gap-2">
+                        <IconItem v-for="tech in TECHNOLOGIES" :key="tech.heading" :rating="tech.rating"
+                            :heading="tech.heading" :subHeading="tech.subHeading"
+                            imageUrl="/src/assets/images/typescript.png" />
+                    </div>
                 </div>
             </div>
             <div class="h-full w-4 border-y-2 border-r-2 border-dimmest-text"></div>
         </div>
-
     </SectionContainer>
 </template>
 
 <script lang="ts">
 import AssetImage from '@/components/home/AssetImage.vue';
+import IconItem from '@/components/shared/IconItem.vue';
 import SectionContainer from '@/components/shared/SectionContainer.vue';
 import { lifecycleLoggerMixin } from '@/mixins/lifecycleLogger.mixin';
+import { ButtonVariants, TECHNOLOGIES } from '@/utils/constants';
+import BaseButton from '../components/shared/BaseButton.vue';
 
 export default {
     name: "HomePage",
     components: {
         SectionContainer,
-        AssetImage
+        AssetImage,
+        IconItem,
+        BaseButton
+    },
+    data() {
+        return {
+            TECHNOLOGIES,
+            ButtonVariants
+        };
     },
     mixins: [lifecycleLoggerMixin],
-}
+};
 </script>

@@ -53,8 +53,8 @@
             </div>
             <div class="h-full w-1 bg-lt-blue-hl" />
             <div class="flex flex-col justify-start">
-                <span class="text-lg font-bold">{{ companyInfo.name }}</span>
-                <span class="text-xs">{{ companyInfo.slogan }}</span>
+                <span class="text-lg font-bold">ACCESS TERMINAL</span>
+                <span class="text-xs">{{ time }}</span>
             </div>
         </div>
 
@@ -84,7 +84,6 @@
                 <BaseButton>PROJECTS</BaseButton>
                 <BaseButton>EXPERIMENTS</BaseButton>
                 <BaseButton>ARTICLES</BaseButton>
-                <BaseButton>CONNECT</BaseButton>
             </div>
         </div>
 
@@ -99,6 +98,9 @@
 import { ButtonVariants, companyInfo } from '@/utils/constants';
 import { Icon } from '@iconify/vue';
 import BaseButton from './BaseButton.vue';
+import { getFormattedDateTime } from '@/utils/helpers';
+
+const time = getFormattedDateTime('time')
 
 export default {
     name: 'Header',
@@ -108,6 +110,7 @@ export default {
     },
     data() {
         return {
+            time,
             ButtonVariants,
             companyInfo // You can use it directly in the template
         };
