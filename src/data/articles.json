@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Google Maps Integration in Next.js 14/13 and React: Load & Display Step-by-Step Guide",
+    "description": "A comprehensive guide on integrating Google Maps in Next.js and React applications with detailed steps for API setup, component implementation, and best practices.",
+    "cover_image": "https://images.unsplash.com/photo-1569336415962-a4bd9f69c2a9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "date": "2024-02-18",
+    "type": "external",
+    "tags": ["Next.js", "React", "Google Maps", "API Integration"],
+    "url": "https://medium.com/@saraanofficial/google-maps-integration-in-next-14-13-and-react-load-display-step-by-step-guide-ab2f6ed7b3c0",
+    "source": "Medium",
+    "source_icon": "mdi:medium"
+  },
+  {
+    "id": 2,
+    "title": "Avoiding Common Pitfalls: Choosing the Right Data Structure in JavaScript and Node.js Development",
+    "description": "An exploration of common data structure mistakes in JavaScript and Node.js development, with recommendations for selecting optimal data structures for different scenarios.",
+    "cover_image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "date": "2024-09-18",
+    "type": "external",
+    "tags": ["JavaScript", "Node.js", "Data Structures", "Performance"],
+    "url": "https://www.linkedin.com/pulse/avoiding-common-pitfalls-choosing-right-data-structure-saraan-asim-p8pdf",
+    "source": "LinkedIn",
+    "source_icon": "mdi:linkedin"
+  },
+  {
+    "id": 3,
+    "title": "How I Used Hash Maps in a Real-World Problem",
+    "description": "A practical case study on implementing hash maps to solve a real-world problem, demonstrating the performance benefits of choosing the right data structure.",
+    "cover_image": "https://images.unsplash.com/photo-1580894742597-87bc8789db3d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "date": "2024-09-13",
+    "type": "external",
+    "tags": ["Hash Maps", "JavaScript", "Performance Optimization", "Algorithms"],
+    "url": "https://www.linkedin.com/pulse/how-i-used-hash-maps-real-world-problem-saraan-asim-c94fe",
+    "source": "LinkedIn",
+    "source_icon": "mdi:linkedin"
+  }
+]

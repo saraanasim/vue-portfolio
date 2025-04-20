@@ -90,7 +90,8 @@
                     :isActive="$route.path === routesConfig.EXPERIMENTS.path">
                     EXPERIMENTS
                 </BaseButton>
-                <BaseButton class="cyber-nav-button">ARTICLES</BaseButton>
+                <BaseButton @click="navigateTo(routesConfig.ARTICLES.path)" class="cyber-nav-button"
+                    :isActive="$route.path === routesConfig.ARTICLES.path">ARTICLES</BaseButton>
             </div>
         </div>
 

@@ -6,8 +6,9 @@ import layoutMiddleware from "./middlewares/loadLayout.middleware";
 const HomePage = () => import("@/views/HomePage.vue");
 const ProjectsPage = () => import("@/views/ProjectsPage.vue");
 const ExperimentsPage = () => import("@/views/ExperimentsPage.vue");
+const ArticlesPage = () => import("@/views/ArticlesPage.vue");
 
-const routesConfig: Record<'HOME' | 'PROJECTS' | 'EXPERIMENTS', RouteRecordRaw> = {
+const routesConfig: Record<'HOME' | 'PROJECTS' | 'EXPERIMENTS' | 'ARTICLES', RouteRecordRaw> = {
     HOME: {
         path: '/',
         name: 'home',
@@ -34,6 +35,16 @@ const routesConfig: Record<'HOME' | 'PROJECTS' | 'EXPERIMENTS', RouteRecordRaw> 
         component: ExperimentsPage,
         meta: {
             title: 'Experiments Page',
+            layout: 'DefaultLayout',
+            middleware: [layoutMiddleware]
+        }
+    },
+    ARTICLES: {
+        path: '/articles',
+        name: 'articles',
+        component: ArticlesPage,
+        meta: {
+            title: 'Articles Page',
             layout: 'DefaultLayout',
             middleware: [layoutMiddleware]
         }
