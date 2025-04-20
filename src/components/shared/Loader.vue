@@ -14,7 +14,7 @@ import { defineComponent, type PropType } from 'vue';
 import { LoaderSizes } from '@/utils/constants'; // Assuming you have defined sizes here
 
 export default defineComponent({
-    name: 'Loader',
+    name: 'AppLoader',
     props: {
         size: {
             type: String as PropType<LoaderSizes>,

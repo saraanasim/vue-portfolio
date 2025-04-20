@@ -1,7 +1,7 @@
 <template>
     <div class="app-loader">
         <div class="loader-container">
-            <Loader class="loader" :size="LoaderSizes.LARGE" />
+            <AppLoader class="loader" :size="LoaderSizes.LARGE" />
         </div>
     </div>
 </template>
@@ -9,12 +9,12 @@
 <script lang="ts">
 import { LoaderSizes } from '@/utils/constants';
 import { defineComponent } from 'vue';
-import Loader from './Loader.vue';
+import AppLoader from './Loader.vue';
 
 export default defineComponent({
     name: 'AppLoader',
     components: {
-        Loader
+        AppLoader
     },
     data() {
         return {
