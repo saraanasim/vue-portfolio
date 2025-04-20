@@ -1,9 +1,9 @@
 <template>
-    <header class="w-full h-16 flex items-center justify-between p-3 bg-lr-blue-hl text-white-text">
+    <header class="w-full h-16 flex items-center justify-between p-3 bg-dark-bg border-b-2 border-cyan text-cyan">
         <!-- Left Section: Logo and Company Name -->
         <div class="h-full flex items-center gap-2">
-            <div class="bg-white-text">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496" class="w-12 h-12 text-lr-blue-hl">
+            <div class="bg-dark-bg border border-cyan p-1">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496" class="w-12 h-12 text-cyan">
                     <path fill="currentColor" opacity="1" stroke="none" d="
                     M277.000000,497.000000 
                     C184.666687,497.000000 92.833374,497.000000 1.000049,497.000000 
@@ -51,47 +51,52 @@
                     z" />
                 </svg>
             </div>
-            <div class="h-full w-1 bg-lt-blue-hl" />
-            <div class="flex flex-col justify-start">
+            <div class="h-full w-1 bg-cyan glow-effect"></div>
+            <div class="flex flex-col justify-start font-mono">
                 <span class="text-lg font-bold">ACCESS TERMINAL</span>
-                <span class="text-xs">{{ time }}</span>
+                <span class="text-xs blink-slow">{{ time }}</span>
             </div>
         </div>
 
         <!-- Right Section: Minimize and Close Buttons -->
         <div class="h-full flex items-center space-x-2">
-            <button title="Minimize">
+            <button title="Minimize" class="cyber-button">
                 <Icon icon="mdi:window-minimize" class="size-6 block" />
-
             </button>
-            <button title="Close">
+            <button title="Close" class="cyber-button">
                 <Icon icon="mdi:close" class="size-6 block" />
             </button>
         </div>
     </header>
-    <header class="w-full h-16 flex gap-2 items-center justify-between p-3 text-dimmest-text border-b-2 border-blue-hl">
+    <header
+        class="w-full h-16 flex gap-2 items-center justify-between p-3 bg-dark-secondary border-b-2 border-cyan text-dimmest-text">
         <!-- Left Section: Access -->
         <div
-            class="h-full w-fit px-2 md:px-4 lg:w-1/3 flex items-center gap-2 bg-blue-hl text-center font-bold text-xs md:text-sm">
-            <p class="w-full">
+            class="h-full w-fit px-2 md:px-4 lg:w-1/3 flex items-center gap-2 bg-dark-bg border border-cyan text-center font-bold text-xs md:text-sm font-mono">
+            <p class="w-full text-cyan scanner-text">
                 REMOTE-ACCESS - SECURE CONNECTION
             </p>
         </div>
 
         <div class="hidden h-full flex-1 lg:flex">
             <div class="w-fit flex gap-8 ml-8">
-                <BaseButton @click="navigateTo(routesConfig.HOME.path)">INFO</BaseButton>
-                <BaseButton @click="navigateTo(routesConfig.PROJECTS.path)">
+                <BaseButton @click="navigateTo(routesConfig.HOME.path)" class="cyber-nav-button"
+                    :isActive="$route.path === routesConfig.HOME.path">INFO</BaseButton>
+                <BaseButton @click="navigateTo(routesConfig.PROJECTS.path)" class="cyber-nav-button"
+                    :isActive="$route.path === routesConfig.PROJECTS.path">
                     Projects
                 </BaseButton>
-                <BaseButton>EXPERIMENTS</BaseButton>
-                <BaseButton>ARTICLES</BaseButton>
+                <BaseButton @click="navigateTo(routesConfig.EXPERIMENTS.path)" class="cyber-nav-button"
+                    :isActive="$route.path === routesConfig.EXPERIMENTS.path">
+                    EXPERIMENTS
+                </BaseButton>
+                <BaseButton class="cyber-nav-button">ARTICLES</BaseButton>
             </div>
         </div>
 
         <!-- Right Section: Login and Logout Buttons -->
-        <div class="h-full flex items-center gap-2 bg-blue-hl font-bold">
-            <BaseButton :variant="ButtonVariants.FlatFilled">Login</BaseButton>
+        <div class="h-full flex items-center gap-2 bg-dark-bg border border-cyan font-bold font-mono">
+            <BaseButton :variant="ButtonVariants.FlatFilled" class="cyber-login-button">Login</BaseButton>
         </div>
     </header>
 </template>
@@ -106,7 +111,7 @@ import { routesConfig } from '@/router';
 const time = getFormattedDateTime('time')
 
 export default {
-    name: 'Header',
+    name: 'AppHeader',
     components: {
         Icon,
         BaseButton
@@ -129,5 +134,119 @@ export default {
 </script>
 
 <style scoped>
-/* No additional scoped styles needed as Tailwind CSS is used */
+.bg-dark-bg {
+    background-color: #021114;
+}
+
+.bg-dark-secondary {
+    background-color: #011518;
+}
+
+.text-cyan {
+    color: #00E5FF;
+}
+
+.border-cyan {
+    border-color: #00E5FF;
+}
+
+.glow-effect {
+    box-shadow: 0 0 10px #00E5FF80;
+}
+
+.cyber-button {
+    background-color: transparent;
+    color: #00E5FF;
+    border: 1px solid #00E5FF;
+    width: 1.75rem;
+    height: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.cyber-button:hover {
+    background-color: #00E5FF;
+    color: #021114;
+    box-shadow: 0 0 10px #00E5FF80;
+}
+
+.cyber-nav-button {
+    background-color: transparent;
+    color: #00E5FF;
+    border: 1px solid #00E5FF;
+    font-family: monospace;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.25rem 0.75rem;
+    transition: all 0.2s;
+}
+
+.cyber-nav-button:hover {
+    background-color: #00E5FF;
+    color: #021114;
+    box-shadow: 0 0 10px #00E5FF80;
+}
+
+.cyber-login-button {
+    background-color: #00E5FF;
+    color: #021114;
+    border: 1px solid #00E5FF;
+    font-family: monospace;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.2s;
+}
+
+.cyber-login-button:hover {
+    box-shadow: 0 0 10px #00E5FF;
+}
+
+.scanner-text {
+    position: relative;
+    overflow: hidden;
+}
+
+.scanner-text::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(0, 229, 255, 0.2) 50%,
+            transparent 100%);
+    animation: scan-horizontal 3s linear infinite;
+}
+
+.blink-slow {
+    animation: blink 2s step-end infinite;
+}
+
+@keyframes scan-horizontal {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0.5;
+    }
+}
 </style>

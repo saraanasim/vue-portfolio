@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        orbitron: ['Orbitron', 'sans-serif'],
+        orbitron: ['Orbitron', 'sans-serif']
       },
       fontWeight: {
         regular: 400,
@@ -13,7 +13,7 @@ export default {
         semibold: 600,
         bold: 700,
         extrabold: 800,
-        black: 900,
+        black: 900
       },
       colors: {
         //Background Colors
@@ -30,10 +30,9 @@ export default {
         'lr-blue-hl': '#296b85',
         'blue-hl': '#2f5668',
         'maroon-hl': '#822301',
-        'green-hl':'#86b81b'
-      },
-    },
+        'green-hl': '#7ba205'
+      }
+    }
   },
-  plugins: [],
+  plugins: []
 }
-

@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "title": "Neural Network Visualization",
+    "description": "Interactive visualization of neural network architectures and learning processes",
+    "cover_image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "status": "Completed",
+    "date": "2023-08-15",
+    "tags": ["AI", "Data Visualization", "JavaScript"],
+    "github_url": "https://github.com/username/neural-viz",
+    "live_url": "https://neural-viz.example.com",
+    "details": {
+      "objective": "Create an interactive visualization tool for understanding neural network architectures and learning processes",
+      "approach": "Used D3.js for visualization with Vue.js frontend and TensorFlow.js for lightweight neural network simulations",
+      "outcomes": "Developed a tool that helps students visualize backpropagation and gradient descent in real-time",
+      "learnings": "Improved understanding of both neural network concepts and advanced D3.js visualization techniques"
+    },
+    "gallery": [
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "https://images.unsplash.com/photo-1551334787-21e6bd3ab135?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Cyberpunk Interface Generator",
+    "description": "Procedurally generated cyberpunk-style UI elements and animations",
+    "cover_image": "https://images.unsplash.com/photo-1506394128096-5a31b55a8a76?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "status": "In Progress",
+    "date": "2023-11-22",
+    "tags": ["UI Design", "Procedural Generation", "CSS Animation"],
+    "github_url": "https://github.com/username/cyberpunk-ui-gen",
+    "live_url": "https://cyberpunk-gen.example.com",
+    "details": {
+      "objective": "Build a tool to procedurally generate cyberpunk-style UI elements for web and game interfaces",
+      "approach": "Using CSS Grid, CSS animations, and JavaScript to create dynamically generated interfaces",
+      "outcomes": "Created a library of reusable components and a generator tool for quick UI prototyping",
+      "learnings": "Deepened knowledge of CSS animations and procedural design patterns"
+    },
+    "gallery": [
+      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "https://images.unsplash.com/photo-1508921340878-ba53e1f016ec?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Audio Spectrum Analyzer",
+    "description": "Real-time audio visualization with WebAudio API",
+    "cover_image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "status": "Completed",
+    "date": "2023-06-10",
+    "tags": ["Audio", "Canvas", "WebAudio API"],
+    "github_url": "https://github.com/username/audio-spectrum",
+    "live_url": "https://audio-spectrum.example.com",
+    "details": {
+      "objective": "Create a real-time audio visualization tool that responds to music input",
+      "approach": "Used WebAudio API for audio processing and HTML Canvas for rendering dynamic visualizations",
+      "outcomes": "Built a responsive visualization that can process both uploaded files and microphone input",
+      "learnings": "Gained experience with real-time audio processing and optimization techniques for smooth animations"
+    },
+    "gallery": [
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Generative Art System",
+    "description": "Algorithm-based art generation with controllable parameters",
+    "cover_image": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "status": "Completed",
+    "date": "2023-03-18",
+    "tags": ["Generative Art", "Canvas", "Mathematics"],
+    "github_url": "https://github.com/username/gen-art",
+    "live_url": "https://gen-art.example.com",
+    "details": {
+      "objective": "Explore the intersection of mathematics, algorithms, and art through generative systems",
+      "approach": "Created a framework for defining generative art algorithms with adjustable parameters",
+      "outcomes": "Produced a series of unique digital artworks and an interactive tool for exploration",
+      "learnings": "Deepened understanding of mathematical patterns and their application to visual art"
+    },
+    "gallery": [
+      "https://images.unsplash.com/photo-1563089145-599997674d42?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "WebGL Particle Physics",
+    "description": "Physics-based particle simulation using WebGL",
+    "cover_image": "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "status": "In Progress",
+    "date": "2024-01-07",
+    "tags": ["WebGL", "Physics", "3D Graphics"],
+    "github_url": "https://github.com/username/particle-physics",
+    "live_url": "https://particles.example.com",
+    "details": {
+      "objective": "Build a high-performance particle physics simulation in the browser",
+      "approach": "Using WebGL for GPU-accelerated calculations and rendering of thousands of particles",
+      "outcomes": "Created an interactive simulation with adjustable physics parameters and visual effects",
+      "learnings": "Gained experience with GPU programming and optimization techniques for real-time simulations"
+    },
+    "gallery": [
+      "https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "https://images.unsplash.com/photo-1519608487953-e999c86e7455?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Smart Home Dashboard",
+    "description": "IoT control interface for smart home devices",
+    "cover_image": "https://images.unsplash.com/photo-1558002038-1055e2e28ed1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "status": "Completed",
+    "date": "2023-09-03",
+    "tags": ["IoT", "Home Automation", "Real-time Data"],
+    "github_url": "https://github.com/username/smart-dashboard",
+    "live_url": "https://smart-dash.example.com",
+    "details": {
+      "objective": "Create a unified dashboard for controlling and monitoring smart home devices",
+      "approach": "Built with Vue.js and integrated with MQTT for real-time communication with IoT devices",
+      "outcomes": "Developed a responsive dashboard with customizable widgets and automation rules",
+      "learnings": "Improved understanding of IoT protocols and real-time data visualization"
+    },
+    "gallery": [
+      "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "https://images.unsplash.com/photo-1585503418537-88331351ad99?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    ]
+  }
+]

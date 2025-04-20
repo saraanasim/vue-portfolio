@@ -5,8 +5,9 @@ import layoutMiddleware from "./middlewares/loadLayout.middleware";
 // Use defineAsyncComponent to handle dynamic imports properly
 const HomePage = () => import("@/views/HomePage.vue");
 const ProjectsPage = () => import("@/views/ProjectsPage.vue");
+const ExperimentsPage = () => import("@/views/ExperimentsPage.vue");
 
-const routesConfig: Record<'HOME' | 'PROJECTS', RouteRecordRaw> = {
+const routesConfig: Record<'HOME' | 'PROJECTS' | 'EXPERIMENTS', RouteRecordRaw> = {
     HOME: {
         path: '/',
         name: 'home',
@@ -26,8 +27,17 @@ const routesConfig: Record<'HOME' | 'PROJECTS', RouteRecordRaw> = {
             layout: 'DefaultLayout',
             middleware: [layoutMiddleware]
         }
+    },
+    EXPERIMENTS: {
+        path: '/experiments',
+        name: 'experiments',
+        component: ExperimentsPage,
+        meta: {
+            title: 'Experiments Page',
+            layout: 'DefaultLayout',
+            middleware: [layoutMiddleware]
+        }
     }
-
 }
 
 const routes: RouteRecordRaw[] = Object.values(routesConfig)

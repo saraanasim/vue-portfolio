@@ -8,7 +8,13 @@
     "description": "Personal portfolio website built with Vue.js and TypeScript",
     "url": "https://portfolio.example.com",
     "githubUrl": "https://github.com/username/portfolio",
-    "technologies": ["Typescript", "Vue.js", "JavaScript"]
+    "technologies": ["Typescript", "Vue.js", "JavaScript"],
+    "image": "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "paragraphs": [
+      "A modern, responsive portfolio website showcasing my skills and projects.",
+      "Designed with a focus on clean UI/UX and optimal performance across devices.",
+      "Implemented using Vue.js 3 and TypeScript to ensure type safety and maintainability."
+    ]
   },
   {
     "id": 2,
@@ -19,7 +25,13 @@
     "description": "RESTful API for task management application",
     "url": "https://api.tasks.example.com",
     "githubUrl": "https://github.com/username/task-api",
-    "technologies": ["Node.js", "JavaScript", "AWS"]
+    "technologies": ["Node.js", "JavaScript", "AWS"],
+    "image": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "paragraphs": [
+      "Scalable REST API built with Node.js and Express for managing tasks and projects.",
+      "Features include user authentication, task scheduling, and notifications.",
+      "Deployed on AWS using containerization for improved scalability and reliability."
+    ]
   },
   {
     "id": 3,
@@ -30,7 +42,13 @@
     "description": "Complete e-commerce solution with admin dashboard",
     "url": "https://shop.example.com",
     "githubUrl": "https://github.com/username/ecommerce",
-    "technologies": ["React", "Node.js", "AWS", "Docker"]
+    "technologies": ["React", "Node.js", "AWS", "Docker"],
+    "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "paragraphs": [
+      "Full-featured e-commerce platform with customer-facing storefront and admin dashboard.",
+      "Includes inventory management, order processing, payment integration, and analytics.",
+      "Built with React frontend and Node.js backend, hosted on AWS infrastructure."
+    ]
   },
   {
     "id": 4,
@@ -41,7 +59,13 @@
     "description": "Real-time analytics dashboard for business metrics",
     "url": "https://analytics.example.com",
     "githubUrl": "https://github.com/username/analytics",
-    "technologies": ["Vue.js", "Typescript", "Jest"]
+    "technologies": ["Vue.js", "Typescript", "Jest"],
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "paragraphs": [
+      "Interactive dashboard for visualizing business KPIs and performance metrics in real-time.",
+      "Features customizable widgets, data filtering, and export functionality.",
+      "Built with Vue.js and D3.js for responsive and interactive data visualizations."
+    ]
   },
   {
     "id": 5,
@@ -52,7 +76,13 @@
     "description": "Custom CMS for managing digital content",
     "url": "https://cms.example.com",
     "githubUrl": "https://github.com/username/cms",
-    "technologies": ["WordPress", "JavaScript"]
+    "technologies": ["WordPress", "JavaScript"],
+    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "paragraphs": [
+      "Custom content management system for digital publishers and content creators.",
+      "Supports various content types, media management, and publishing workflows.",
+      "Built on WordPress core with extensive customizations for improved performance."
+    ]
   },
   {
     "id": 6,
@@ -63,7 +93,13 @@
     "description": "Weather forecasting mobile application",
     "url": "https://weather.example.com",
     "githubUrl": "https://github.com/username/weather-app",
-    "technologies": ["React", "JavaScript", "AWS"]
+    "technologies": ["React", "JavaScript", "AWS"],
+    "image": "https://images.unsplash.com/photo-1530908295418-a12e326966ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "paragraphs": [
+      "Cross-platform mobile app providing accurate weather forecasts and alerts.",
+      "Features include hourly and weekly forecasts, radar maps, and severe weather notifications.",
+      "Built with React Native and integrates with multiple weather data providers."
+    ]
   },
   {
     "id": 7,
@@ -74,7 +110,13 @@
     "description": "ML service for data classification and prediction",
     "url": "https://ml.example.com",
     "githubUrl": "https://github.com/username/ml-service",
-    "technologies": ["Python", "Docker", "AWS"]
+    "technologies": ["Python", "Docker", "AWS"],
+    "image": "https://images.unsplash.com/photo-1527474305487-b87b222841cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "paragraphs": [
+      "Machine learning microservice for data classification and predictive analytics.",
+      "Implements various ML algorithms for text analysis, recommendation systems, and anomaly detection.",
+      "Deployed as containerized service on AWS with auto-scaling capabilities."
+    ]
   },
   {
     "id": 8,
@@ -85,6 +127,80 @@
     "description": "Tool for visualizing blockchain transactions",
     "url": "https://blockchain.example.com",
     "githubUrl": "https://github.com/username/blockchain-explorer",
-    "technologies": ["Typescript", "React", "Node.js"]
+    "technologies": ["Typescript", "React", "Node.js"],
+    "image": "https://images.unsplash.com/photo-1516245834210-c4c142787335?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "paragraphs": [
+      "Web application for exploring and visualizing blockchain transactions and data.",
+      "Features include transaction history, block details, and address information.",
+      "Built with React and integrates with multiple blockchain networks."
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Social Media Dashboard",
+    "size": "3.2 GB",
+    "type": "Full Stack",
+    "icon": "folder",
+    "description": "Unified dashboard for managing multiple social media accounts",
+    "url": "https://social.example.com",
+    "githubUrl": "https://github.com/username/social-dashboard",
+    "technologies": ["Vue.js", "Node.js", "MongoDB"],
+    "image": "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "paragraphs": [
+      "Comprehensive dashboard for managing and analyzing multiple social media accounts.",
+      "Features include content scheduling, analytics, and engagement tracking.",
+      "Built with Vue.js frontend and Node.js backend with MongoDB for data storage."
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Video Streaming Platform",
+    "size": "25.7 GB",
+    "type": "Full Stack",
+    "icon": "folder",
+    "description": "Custom video hosting and streaming service",
+    "url": "https://video.example.com",
+    "githubUrl": "https://github.com/username/video-platform",
+    "technologies": ["React", "Node.js", "AWS", "FFmpeg"],
+    "image": "https://images.unsplash.com/photo-1536240478700-b869070f9279?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "paragraphs": [
+      "Scalable video hosting and streaming platform with adaptive bitrate playback.",
+      "Features include video transcoding, content protection, and analytics.",
+      "Built with React frontend and Node.js backend, leveraging AWS media services."
+    ]
+  },
+  {
+    "id": 11,
+    "name": "IoT Home Automation",
+    "size": "780 MB",
+    "type": "Full Stack",
+    "icon": "folder",
+    "description": "Smart home automation system using IoT devices",
+    "url": "https://home.example.com",
+    "githubUrl": "https://github.com/username/iot-home",
+    "technologies": ["Python", "React", "MQTT", "Raspberry Pi"],
+    "image": "https://images.unsplash.com/photo-1558002038-1055e2e28ed1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "paragraphs": [
+      "Comprehensive home automation system integrating various IoT devices and sensors.",
+      "Features include lighting control, climate monitoring, and security management.",
+      "Built with Python backend, React frontend, and MQTT messaging protocol."
+    ]
+  },
+  {
+    "id": 12,
+    "name": "AR Navigation App",
+    "size": "5.1 GB",
+    "type": "Mobile",
+    "icon": "folder",
+    "description": "Augmented reality navigation application",
+    "url": "https://ar-nav.example.com",
+    "githubUrl": "https://github.com/username/ar-navigation",
+    "technologies": ["Swift", "ARKit", "MapKit"],
+    "image": "https://images.unsplash.com/photo-1527856263669-12c3a0af2aa6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "paragraphs": [
+      "Mobile application utilizing augmented reality for enhanced navigation and wayfinding.",
+      "Features include AR direction overlay, points of interest, and offline maps.",
+      "Built with Swift and ARKit for iOS with real-time location tracking."
+    ]
   }
 ]

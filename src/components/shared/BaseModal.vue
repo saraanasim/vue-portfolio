@@ -113,7 +113,7 @@ export default {
 }
 
 .header-icon {
-    background-color: #00E5FF;
+    background-color: #7ba205;
     color: #011518;
     width: 1.5rem;
     height: 1.5rem;
@@ -130,13 +130,14 @@ export default {
     font-weight: bold;
     letter-spacing: 1px;
     text-transform: uppercase;
+    color: #7ba205;
 }
 
 .close-btn {
     font-family: monospace;
     background-color: transparent;
-    color: #00E5FF;
-    border: 1px solid #00E5FF;
+    color: #7ba205;
+    border: 1px solid #7ba205;
     width: 1.5rem;
     height: 1.5rem;
     display: flex;

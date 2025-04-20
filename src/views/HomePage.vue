@@ -5,10 +5,10 @@
             <BaseButton :variant="ButtonVariants.TypeWriter">Upload</BaseButton>
             <BaseButton :variant="ButtonVariants.TypeWriter">Download</BaseButton>
         </template>
-        <div class="w-full h-full flex lg:max-h-[500px]">
+        <div class="w-full h-full flex ">
             <div class="h-full w-4 border-y-2 border-l-2 border-dimmest-text"></div>
             <div class="w-full grid grid-cols-3 gap-2">
-                <div class="col-span-3 lg:col-span-2 flex flex-col justify-center border-t-4 border-maroon-hl">
+                <div class="col-span-3 lg:col-span-2 flex flex-col justify-center border-t-4 border-green-hl">
                     <AssetImage imageSrc="/src/assets/images/saraan-1.png" />
                 </div>
                 <div class="col-span-3 lg:col-span-1 overflow-y-auto max-h-screen lg:max-h-full">

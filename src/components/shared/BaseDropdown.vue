@@ -2,12 +2,13 @@
     <div class="relative">
         <!-- Trigger Button -->
         <button :class="[
-            'p-0 w-full h-full min-size-1 max-h-10 font-bold text-dimmest-text transform transition-transform duration-200 ease-in-out',
+            'cyber-dropdown-button p-0 w-full h-full min-size-1 max-h-10 font-bold transform transition-transform duration-200 ease-in-out',
             { 'opacity-50 cursor-not-allowed': isDisabled }
         ]" @click="toggleDropdown" :disabled="isDisabled">
-            <div class="block h-2 w-full bg-gray-bg border-x-[0.1rem] border-t-[0.1rem] border-dimmest-text rounded-t-[2px]"
-                :class="{ 'border-maroon-hl bg-maroon-hl': isOpen }" />
-            <div class="flex justify-start border-[0.1rem] border-dimmest-text rounded-b-[2px] p-2 bg-black">
+            <div class="block h-2 w-full bg-dark-bg border-x-[0.1rem] border-t-[0.1rem] border-cyan rounded-t-[2px]"
+                :class="{ 'cyber-active-bar': isOpen }" />
+            <div
+                class="flex justify-start border-[0.1rem] border-cyan rounded-b-[2px] p-2 bg-dark-bg font-mono text-cyan">
                 <slot name="trigger">
                     <span class="font-mono">{{ selected?.label || 'Select an Option' }}</span>
                 </slot>
@@ -16,13 +17,13 @@
 
         <!-- Dropdown Menu -->
         <div v-if="isOpen"
-            class="absolute top-16 z-50 w-full bg-black border-2 border-dimmest-text rounded-sm shadow-lg max-h-60 overflow-y-auto"
+            class="absolute top-16 z-50 w-full bg-dark-bg border-2 border-cyan rounded-sm shadow-lg max-h-60 overflow-y-auto cyber-dropdown-menu"
             ref="dropdownMenu">
-            <ul class="font-mono">
+            <ul class="font-mono text-cyan">
                 <li v-for="(option, index) in options" :key="index"
-                    class="dropdown-option px-4 py-2 hover:bg-gray-bg cursor-pointer flex items-center"
-                    :class="{ 'text-maroon-hl': isOptionSelected(option) }" @click="selectOption(option)">
-                    <span class="mr-2" v-if="isOptionSelected(option)">></span>
+                    class="cyber-dropdown-option px-4 py-2 cursor-pointer flex items-center"
+                    :class="{ 'cyber-option-selected': isOptionSelected(option) }" @click="selectOption(option)">
+                    <span class="mr-2 cyber-selector" v-if="isOptionSelected(option)">></span>
                     <span v-else class="mr-2 opacity-0">></span>
                     {{ option.label }}
                 </li>
@@ -117,16 +118,98 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.dropdown-option {
-    transition: background-color 0.2s ease-in-out;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+.bg-dark-bg {
+    background-color: #021114;
 }
 
-.dropdown-option:last-child {
+.text-cyan {
+    color: #00E5FF;
+}
+
+.border-cyan {
+    border-color: #00E5FF;
+}
+
+.cyber-dropdown-button {
+    background-color: transparent;
+    color: #00E5FF;
+    transition: all 0.2s;
+}
+
+.cyber-dropdown-button:not(:disabled):hover {
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.4);
+    transform: translateY(-1px);
+}
+
+.cyber-active-bar {
+    background-color: rgba(0, 229, 255, 0.2);
+    box-shadow: 0 0 5px rgba(0, 229, 255, 0.5);
+}
+
+.cyber-dropdown-menu {
+    background-color: #011518;
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
+    border-color: #00E5FF;
+    position: relative;
+    overflow: hidden;
+}
+
+.cyber-dropdown-option {
+    transition: all 0.2s ease;
+    border-bottom: 1px solid rgba(0, 229, 255, 0.1);
+    background-color: transparent;
+}
+
+.cyber-dropdown-option:last-child {
     border-bottom: none;
 }
 
-.dropdown-option:hover {
-    background-color: #2a2a2a;
+.cyber-dropdown-option:hover {
+    background-color: rgba(0, 229, 255, 0.1);
+    box-shadow: inset 0 0 5px rgba(0, 229, 255, 0.2);
+}
+
+.cyber-option-selected {
+    background-color: rgba(0, 229, 255, 0.15);
+    box-shadow: inset 0 0 8px rgba(0, 229, 255, 0.3);
+}
+
+.cyber-selector {
+    animation: blink 1s step-end infinite;
+}
+
+.cyber-scanline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: rgba(0, 229, 255, 0.7);
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.8);
+    z-index: 1;
+    animation: scan 2s linear infinite;
+}
+
+@keyframes scan {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 100%;
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0.3;
+    }
 }
 </style>

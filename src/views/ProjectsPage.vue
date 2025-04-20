@@ -5,9 +5,9 @@
             <BaseButton :variant="ButtonVariants.TypeWriter">Upload</BaseButton>
             <BaseButton :variant="ButtonVariants.TypeWriter">Download</BaseButton>
         </template>
-        <div class="w-full h-full flex lg:max-h-[500px]">
+        <div class="w-full h-full flex">
             <div class="h-full w-4 border-y-2 border-l-2 border-dimmest-text"></div>
-            <div class="w-full grid grid-cols-12 gap-2 border-t-4 border-maroon-hl">
+            <div class="w-full grid grid-cols-12 gap-2 border-t-4 border-green-hl">
                 <div class="hidden lg:block lg:col-span-3 overflow-y-auto">
                     <SelectableIconItem v-for="tech in filteredTechnologies" :key="tech.heading" :rating="tech.rating"
                         :heading="tech.heading" :subHeading="tech.subHeading" :imageUrl="tech.imageUrl"
@@ -57,16 +57,18 @@
                         </div>
 
                         <div v-for="project in filteredProjects" :key="project.id"
-                            class="flex px-2 py-2 border-b border-dimmest-text hover:bg-gray-bg cursor-pointer"
+                            class="flex px-2 py-2 border-b border-cyan/30 hover:bg-dark-bg cursor-pointer transition-all duration-200"
                             @click="openProjectDetails(project)">
                             <div class="flex-1 flex items-center">
-                                <div class="mr-2">
-                                    <Icon icon="mdi:folder" class="w-5 h-5 text-dimmest-text" />
+                                <div class="mr-2 flex items-center">
+                                    <div class="project-thumbnail-container">
+                                        <img :src="project.image" :alt="project.name" class="project-thumbnail" />
+                                    </div>
                                 </div>
-                                <div>{{ project.name }}</div>
+                                <div class="font-mono text-cyan">{{ project.name }}</div>
                             </div>
-                            <div class="w-28 text-right">{{ project.size }}</div>
-                            <div class="w-28 text-right">{{ project.type }}</div>
+                            <div class="w-28 text-right font-mono text-cyan/70">{{ project.size }}</div>
+                            <div class="w-28 text-right font-mono text-cyan/70">{{ project.type }}</div>
                         </div>
                     </div>
                 </div>
@@ -78,6 +80,10 @@
         <BaseModal v-model="isModalOpen" :title="selectedProject ? selectedProject.name : 'Project Details'"
             accessLevel="USER">
             <div v-if="selectedProject" class="project-details">
+                <div class="project-image-container">
+                    <img :src="selectedProject.image" :alt="selectedProject.name" class="project-image" />
+                </div>
+
                 <div class="details-grid">
                     <div class="detail-row">
                         <div class="detail-label">PROJECT ID:</div>
@@ -126,10 +132,21 @@
                         {{ tech }}
                     </div>
                 </div>
+
+                <div class="section-divider">
+                    <div class="divider-line"></div>
+                    <div class="divider-label">DETAILS</div>
+                    <div class="divider-line"></div>
+                </div>
+
+                <div class="paragraphs">
+                    <p v-for="(paragraph, index) in selectedProject.paragraphs" :key="index" class="paragraph">
+                        {{ paragraph }}
+                    </p>
+                </div>
             </div>
 
             <template #footer-buttons>
-                <button class="action-btn" @click="downloadProject" v-if="selectedProject">DOWNLOAD</button>
                 <button class="action-btn" @click="isModalOpen = false">DISCONNECT</button>
             </template>
         </BaseModal>
@@ -146,7 +163,6 @@ import BaseModal from '@/components/shared/BaseModal.vue';
 import { lifecycleLoggerMixin } from '@/mixins/lifecycleLogger.mixin';
 import { ButtonVariants, TECHNOLOGIES } from '@/utils/constants';
 import projectsData from '@/data/projects.json';
-import { Icon } from '@iconify/vue';
 
 interface Project {
     id: number;
@@ -158,6 +174,8 @@ interface Project {
     url: string;
     githubUrl: string;
     technologies: string[];
+    image: string;
+    paragraphs: string[];
 }
 
 export default {
@@ -168,7 +186,6 @@ export default {
         BaseButton,
         BaseDropdown,
         BaseModal,
-        Icon,
     },
     data() {
         return {
@@ -326,7 +343,25 @@ export default {
 <style scoped>
 .project-details {
     font-family: monospace;
-    color: #00E5FF;
+    color: var(--text-cyan, #00E5FF);
+}
+
+.project-image-container {
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.project-image:hover {
+    transform: scale(1.02);
 }
 
 .details-grid {
@@ -371,7 +406,7 @@ export default {
     font-weight: bold;
     text-transform: uppercase;
     font-size: 0.8rem;
-    color: rgba(0, 229, 255, 0.9);
+    color: var(--green-hl, #4caf50);
 }
 
 .description {
@@ -383,6 +418,24 @@ export default {
     background-color: rgba(0, 229, 255, 0.05);
 }
 
+.paragraphs {
+    margin-bottom: 1.5rem;
+}
+
+.paragraph {
+    font-family: monospace;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+    padding: 0.5rem;
+    border-left: 2px solid rgba(0, 229, 255, 0.4);
+    background-color: rgba(0, 229, 255, 0.03);
+}
+
+.paragraph:hover {
+    background-color: rgba(0, 229, 255, 0.08);
+    border-left-color: rgba(0, 229, 255, 0.8);
+}
+
 .tech-tags {
     display: flex;
     flex-wrap: wrap;
@@ -390,12 +443,19 @@ export default {
 }
 
 .tech-tag {
-    background-color: rgba(0, 229, 255, 0.1);
-    border: 1px solid rgba(0, 229, 255, 0.4);
+    background-color: #011518;
+    border: 1px solid #00E5FF;
     color: #00E5FF;
     padding: 0.25rem 0.5rem;
     border-radius: 2px;
     font-size: 0.8rem;
+    box-shadow: 0 0 5px rgba(0, 229, 255, 0.3);
+    font-family: monospace;
+}
+
+.tech-tag:hover {
+    background-color: rgba(0, 229, 255, 0.1);
+    box-shadow: 0 0 8px rgba(0, 229, 255, 0.5);
 }
 
 .link {
@@ -403,10 +463,53 @@ export default {
     text-decoration: underline;
     text-decoration-color: rgba(0, 229, 255, 0.4);
     text-underline-offset: 2px;
+    font-family: monospace;
 }
 
 .link:hover {
     text-decoration-color: #00E5FF;
     background-color: rgba(0, 229, 255, 0.1);
+    box-shadow: 0 0 5px rgba(0, 229, 255, 0.3);
+}
+
+.action-btn {
+    background-color: transparent;
+    color: #7ba205;
+    border: 1px solid #7ba205;
+    padding: 0.25rem 0.75rem;
+    font-family: monospace;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.action-btn:hover {
+    background-color: #00E5FF;
+    color: #011518;
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
+}
+
+.text-cyan {
+    color: #00E5FF;
+}
+
+.bg-dark-bg {
+    background-color: #011518;
+}
+
+.project-thumbnail-container {
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 229, 255, 0.4);
+    margin-right: 4px;
+}
+
+.project-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 </style>
