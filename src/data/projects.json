@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "name": "Portfolio Website",
+    "size": "507.9 MB",
+    "type": "Frontend",
+    "icon": "folder",
+    "description": "Personal portfolio website built with Vue.js and TypeScript",
+    "url": "https://portfolio.example.com",
+    "githubUrl": "https://github.com/username/portfolio",
+    "technologies": ["Typescript", "Vue.js", "JavaScript"]
+  },
+  {
+    "id": 2,
+    "name": "Task Management API",
+    "size": "851.3 MB",
+    "type": "Backend",
+    "icon": "folder",
+    "description": "RESTful API for task management application",
+    "url": "https://api.tasks.example.com",
+    "githubUrl": "https://github.com/username/task-api",
+    "technologies": ["Node.js", "JavaScript", "AWS"]
+  },
+  {
+    "id": 3,
+    "name": "E-commerce Platform",
+    "size": "16.8 GB",
+    "type": "Full Stack",
+    "icon": "folder",
+    "description": "Complete e-commerce solution with admin dashboard",
+    "url": "https://shop.example.com",
+    "githubUrl": "https://github.com/username/ecommerce",
+    "technologies": ["React", "Node.js", "AWS", "Docker"]
+  },
+  {
+    "id": 4,
+    "name": "Analytics Dashboard",
+    "size": "814 KB",
+    "type": "Frontend",
+    "icon": "folder",
+    "description": "Real-time analytics dashboard for business metrics",
+    "url": "https://analytics.example.com",
+    "githubUrl": "https://github.com/username/analytics",
+    "technologies": ["Vue.js", "Typescript", "Jest"]
+  },
+  {
+    "id": 5,
+    "name": "Content Management System",
+    "size": "90.2 MB",
+    "type": "Full Stack",
+    "icon": "folder",
+    "description": "Custom CMS for managing digital content",
+    "url": "https://cms.example.com",
+    "githubUrl": "https://github.com/username/cms",
+    "technologies": ["WordPress", "JavaScript"]
+  },
+  {
+    "id": 6,
+    "name": "Mobile Weather App",
+    "size": "4.2 GB",
+    "type": "Mobile",
+    "icon": "folder",
+    "description": "Weather forecasting mobile application",
+    "url": "https://weather.example.com",
+    "githubUrl": "https://github.com/username/weather-app",
+    "technologies": ["React", "JavaScript", "AWS"]
+  },
+  {
+    "id": 7,
+    "name": "Machine Learning Service",
+    "size": "1.1 GB",
+    "type": "Backend",
+    "icon": "folder",
+    "description": "ML service for data classification and prediction",
+    "url": "https://ml.example.com",
+    "githubUrl": "https://github.com/username/ml-service",
+    "technologies": ["Python", "Docker", "AWS"]
+  },
+  {
+    "id": 8,
+    "name": "Blockchain Explorer",
+    "size": "15.4 KB",
+    "type": "Frontend",
+    "icon": "folder",
+    "description": "Tool for visualizing blockchain transactions",
+    "url": "https://blockchain.example.com",
+    "githubUrl": "https://github.com/username/blockchain-explorer",
+    "technologies": ["Typescript", "React", "Node.js"]
+  }
+]

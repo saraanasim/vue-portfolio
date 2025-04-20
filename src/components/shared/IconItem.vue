@@ -1,5 +1,6 @@
 <template>
-    <div class="col-span-2 md:col-span-1 lg:col-span-2 w-full flex gap-4 relative p-4 bg-gray-bg hover:bg-blue-hl">
+    <div
+        class="col-span-2 md:col-span-1 lg:col-span-2 w-full flex gap-4 relative p-4 bg-gray-bg hover:bg-blue-hl border border-dimmest-text">
         <div class="relative h-fit">
             <!-- Image with corner borders -->
             <img :src="imageUrl" alt="Asset Image" class="object-fit h-full max-h-[72px]" />

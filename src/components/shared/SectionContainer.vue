@@ -3,7 +3,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
             <div class="col-span-1 flex justify-center">
                 <img src="/src/assets/logos/logo-text.png" alt="Saraan Techworks Logo"
-                    class="object-contain w-full h-full max-w-sm" />
+                    class="object-contain w-full h-full max-w-xs" />
             </div>
             <div class="col-span-1 lg:col-span-2 flex items-end">
 
@@ -29,9 +29,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
 import { ButtonVariants } from '@/utils/constants';
-import BaseButton from './BaseButton.vue';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
     name: 'SectionContainer',
@@ -40,9 +39,6 @@ export default defineComponent({
             type: String,
             required: true
         }
-    },
-    components: {
-        BaseButton,
     },
     setup() {
         return {

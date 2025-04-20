@@ -11,7 +11,7 @@
                 <div class="col-span-3 lg:col-span-2 flex flex-col justify-center border-t-4 border-maroon-hl">
                     <AssetImage imageSrc="/src/assets/images/saraan-1.png" />
                 </div>
-                <div class="col-span-3 lg:col-span-1 overflow-y-auto">
+                <div class="col-span-3 lg:col-span-1 overflow-y-auto max-h-screen lg:max-h-full">
                     <div class="grid grid-cols-2 gap-2">
                         <IconItem v-for="tech in TECHNOLOGIES" :key="tech.heading" :rating="tech.rating"
                             :heading="tech.heading" :subHeading="tech.subHeading"

@@ -80,8 +80,10 @@
 
         <div class="hidden h-full flex-1 lg:flex">
             <div class="w-fit flex gap-8 ml-8">
-                <BaseButton>INFO</BaseButton>
-                <BaseButton>PROJECTS</BaseButton>
+                <BaseButton @click="navigateTo(routesConfig.HOME.path)">INFO</BaseButton>
+                <BaseButton @click="navigateTo(routesConfig.PROJECTS.path)">
+                    Projects
+                </BaseButton>
                 <BaseButton>EXPERIMENTS</BaseButton>
                 <BaseButton>ARTICLES</BaseButton>
             </div>
@@ -99,6 +101,7 @@ import { ButtonVariants, companyInfo } from '@/utils/constants';
 import { Icon } from '@iconify/vue';
 import BaseButton from './BaseButton.vue';
 import { getFormattedDateTime } from '@/utils/helpers';
+import { routesConfig } from '@/router';
 
 const time = getFormattedDateTime('time')
 
@@ -112,8 +115,15 @@ export default {
         return {
             time,
             ButtonVariants,
-            companyInfo // You can use it directly in the template
+            companyInfo,
+            routesConfig
         };
+    },
+    methods: {
+        navigateTo(path: string) {
+            console.log({ path })
+            this.$router.push(path);
+        }
     }
 }
 </script>

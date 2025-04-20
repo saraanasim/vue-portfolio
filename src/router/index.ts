@@ -1,14 +1,13 @@
 import { createRouter, createWebHistory, type RouteRecordRaw } from "vue-router";
 import titleMiddleware from "./middlewares/changeTitle.middleware";
 import layoutMiddleware from "./middlewares/loadLayout.middleware";
-import { defineAsyncComponent } from "vue";
 
 // Use defineAsyncComponent to handle dynamic imports properly
-const HomePage = defineAsyncComponent(() => import("@/views/HomePage.vue"));
-const ProjectsPage = defineAsyncComponent(() => import("@/views/ProjectsPage.vue"));
+const HomePage = () => import("@/views/HomePage.vue");
+const ProjectsPage = () => import("@/views/ProjectsPage.vue");
 
-const routes: RouteRecordRaw[] = [
-    {
+const routesConfig: Record<'HOME' | 'PROJECTS', RouteRecordRaw> = {
+    HOME: {
         path: '/',
         name: 'home',
         component: HomePage,
@@ -18,7 +17,7 @@ const routes: RouteRecordRaw[] = [
             middleware: [layoutMiddleware]
         }
     },
-    {
+    PROJECTS: {
         path: '/projects',
         name: 'projects',
         component: ProjectsPage,
@@ -28,7 +27,10 @@ const routes: RouteRecordRaw[] = [
             middleware: [layoutMiddleware]
         }
     }
-];
+
+}
+
+const routes: RouteRecordRaw[] = Object.values(routesConfig)
 
 const router = createRouter({
     history: createWebHistory(),
@@ -69,4 +71,4 @@ router.beforeEach((to, from, next) => {
     });
 });
 
-export { router };
+export { router, routesConfig };
