@@ -1,6 +1,7 @@
 // utils/storageHelpers.ts
 
 import { APP_LOADER_TIMEOUT } from "./constants";
+import configData from '@/data/config.json';
 
 // Utility function to get the current timestamp
 const getCurrentTime = () => new Date().getTime();
@@ -54,3 +55,21 @@ export function getFormattedDateTime(format: FormatOption) {
             return `${date} ${time}`;
     }
 }
+
+/**
+ * Downloads the resume file specified in the config
+ */
+export const downloadResume = (): void => {
+    const resumeUrl = configData.resumeUrl;
+    const link = document.createElement('a');
+    link.href = resumeUrl;
+
+    // Extract filename from path for the download attribute
+    const fileName = resumeUrl.split('/').pop() || 'resume.pdf';
+    link.download = fileName;
+
+    // Append to body, click and remove
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};

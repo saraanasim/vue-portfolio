@@ -1,0 +1,30 @@
+{
+  "resumeUrl": "/resume/saraan_resume_2023.pdf",
+  "socials": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/yourusername",
+      "icon": "mdi:github"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://linkedin.com/in/yourusername",
+      "icon": "mdi:linkedin"
+    },
+    {
+      "name": "Twitter",
+      "url": "https://twitter.com/yourusername",
+      "icon": "mdi:twitter"
+    },
+    {
+      "name": "Email",
+      "url": "mailto:your.email@example.com",
+      "icon": "mdi:email"
+    },
+    {
+      "name": "Medium",
+      "url": "https://medium.com/@yourusername",
+      "icon": "mdi:medium"
+    }
+  ]
+}

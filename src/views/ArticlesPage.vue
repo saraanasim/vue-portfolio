@@ -1,9 +1,9 @@
 <template>
     <SectionContainer title="/ARCHIVES/ARTICLES/LOG">
         <template #buttons>
-            <BaseButton :variant="ButtonVariants.TypeWriter" :isActive="true">Connect</BaseButton>
-            <BaseButton :variant="ButtonVariants.TypeWriter">Browse</BaseButton>
-            <BaseButton :variant="ButtonVariants.TypeWriter">Read</BaseButton>
+            <BaseButton :variant="ButtonVariants.TypeWriter" :isActive="true" @click="openConnectModal">Connect
+            </BaseButton>
+            <BaseButton :variant="ButtonVariants.TypeWriter" @click="downloadResumeFile">Download</BaseButton>
         </template>
         <div class="w-full h-full flex">
             <div class="h-full w-4 border-y-2 border-l-2 border-dimmest-text"></div>
@@ -72,10 +72,10 @@
                                     <div class="card-date">{{ article.date }}</div>
                                     <div class="card-tags">
                                         <span v-for="tag in article.tags.slice(0, 2)" :key="tag" class="card-tag">{{ tag
-                                            }}</span>
+                                        }}</span>
                                         <span v-if="article.tags.length > 2" class="card-tag-more">+{{
                                             article.tags.length - 2
-                                            }}</span>
+                                        }}</span>
                                     </div>
                                 </div>
                                 <div class="external-link-indicator">
@@ -99,6 +99,9 @@
             </div>
             <div class="h-full w-4 border-y-2 border-r-2 border-dimmest-text"></div>
         </div>
+
+        <!-- Connect Modal -->
+        <ConnectModal v-model="isConnectModalOpen" />
     </SectionContainer>
 </template>
 
@@ -106,10 +109,12 @@
 import SectionContainer from '@/components/shared/SectionContainer.vue';
 import BaseButton from '@/components/shared/BaseButton.vue';
 import BaseDropdown, { type DropdownOption } from '@/components/shared/BaseDropdown.vue';
+import ConnectModal from '@/components/shared/ConnectModal.vue';
 import { ButtonVariants } from '@/utils/constants';
 import { Icon } from '@iconify/vue';
 import articlesData from '@/data/articles.json';
 import { ref, computed } from 'vue';
+import { downloadResume } from '@/utils/helpers';
 
 interface Article {
     id: number;
@@ -130,12 +135,14 @@ export default {
         SectionContainer,
         BaseButton,
         BaseDropdown,
+        ConnectModal,
         Icon
     },
     setup() {
         const articles = ref<Article[]>(articlesData as Article[]);
         const selectedTags = ref<string[]>([]);
         const isDropdownOpen = ref(false);
+        const isConnectModalOpen = ref(false);
 
         // Compute all unique tags from articles
         const uniqueTags = computed(() => {
@@ -226,6 +233,16 @@ export default {
             window.open(url, '_blank', 'noopener,noreferrer');
         };
 
+        // Open connect modal
+        const openConnectModal = () => {
+            isConnectModalOpen.value = true;
+        };
+
+        // Download resume
+        const downloadResumeFile = () => {
+            downloadResume();
+        };
+
         return {
             articles,
             selectedTags,
@@ -240,7 +257,10 @@ export default {
             handleTagSelect,
             selectedTagValues,
             selectedTagsDisplay,
-            openArticleLink
+            openArticleLink,
+            isConnectModalOpen,
+            openConnectModal,
+            downloadResumeFile
         };
     }
 };

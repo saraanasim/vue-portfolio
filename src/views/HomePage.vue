@@ -1,9 +1,9 @@
 <template>
     <SectionContainer title="/ARCHIVES/ASSET/INFO">
         <template #buttons>
-            <BaseButton :variant="ButtonVariants.TypeWriter" :isActive="true">Connect</BaseButton>
-            <BaseButton :variant="ButtonVariants.TypeWriter">Upload</BaseButton>
-            <BaseButton :variant="ButtonVariants.TypeWriter">Download</BaseButton>
+            <BaseButton :variant="ButtonVariants.TypeWriter" :isActive="true" @click="openConnectModal">Connect
+            </BaseButton>
+            <BaseButton :variant="ButtonVariants.TypeWriter" @click="downloadResumeFile">Download</BaseButton>
         </template>
         <div class="w-full h-full flex ">
             <div class="h-full w-4 border-y-2 border-l-2 border-dimmest-text"></div>
@@ -21,6 +21,9 @@
             </div>
             <div class="h-full w-4 border-y-2 border-r-2 border-dimmest-text"></div>
         </div>
+
+        <!-- Connect Modal -->
+        <ConnectModal v-model="isConnectModalOpen" />
     </SectionContainer>
 </template>
 
@@ -31,6 +34,8 @@ import SectionContainer from '@/components/shared/SectionContainer.vue';
 import { lifecycleLoggerMixin } from '@/mixins/lifecycleLogger.mixin';
 import { ButtonVariants, TECHNOLOGIES } from '@/utils/constants';
 import BaseButton from '../components/shared/BaseButton.vue';
+import ConnectModal from '@/components/shared/ConnectModal.vue';
+import { downloadResume } from '@/utils/helpers';
 
 export default {
     name: "HomePage",
@@ -38,13 +43,23 @@ export default {
         SectionContainer,
         AssetImage,
         IconItem,
-        BaseButton
+        BaseButton,
+        ConnectModal
     },
     data() {
         return {
             TECHNOLOGIES,
-            ButtonVariants
+            ButtonVariants,
+            isConnectModalOpen: false
         };
+    },
+    methods: {
+        openConnectModal() {
+            this.isConnectModalOpen = true;
+        },
+        downloadResumeFile() {
+            downloadResume();
+        }
     },
     mixins: [lifecycleLoggerMixin],
 };
