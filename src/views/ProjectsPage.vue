@@ -31,7 +31,7 @@
                                     NAME
                                 </BaseButton>
                                 <span v-if="sortKey === 'name'" class="ml-1">{{ sortOrder === 'asc' ? '▲' : '▼'
-                                    }}</span>
+                                }}</span>
                             </div>
                             <div class="w-28 flex items-center">
                                 <BaseButton :variant="ButtonVariants.Flat" :isActive="sortKey === 'size'"
@@ -39,7 +39,7 @@
                                     SIZE
                                 </BaseButton>
                                 <span v-if="sortKey === 'size'" class="ml-1">{{ sortOrder === 'asc' ? '▲' : '▼'
-                                    }}</span>
+                                }}</span>
                             </div>
                             <div class="w-28 flex items-center">
                                 <BaseButton :variant="ButtonVariants.Flat" :isActive="sortKey === 'type'"
@@ -47,7 +47,7 @@
                                     TYPE
                                 </BaseButton>
                                 <span v-if="sortKey === 'type'" class="ml-1">{{ sortOrder === 'asc' ? '▲' : '▼'
-                                    }}</span>
+                                }}</span>
                             </div>
                         </div>
 
@@ -108,7 +108,7 @@
                         <div class="detail-value">
                             <a :href="selectedProject.githubUrl" target="_blank" class="link">{{
                                 selectedProject.githubUrl
-                            }}</a>
+                                }}</a>
                         </div>
                     </div>
                 </div>
@@ -206,6 +206,30 @@ export default {
             selectedProject: null as Project | null,
             isConnectModalOpen: false,
         };
+    },
+    created() {
+        // Check if there's a tech query parameter and pre-select it
+        const techParam = this.$route.query.tech;
+        if (techParam && typeof techParam === 'string') {
+            this.selectedTechs = [techParam];
+        }
+    },
+    watch: {
+        // Watch for route changes and update selected technologies
+        '$route.query.tech': {
+            handler(newTech) {
+                if (newTech && typeof newTech === 'string') {
+                    // Find the matching technology with correct casing
+                    const matchingTech = this.TECHNOLOGIES.find(
+                        tech => tech.heading.toLowerCase() === newTech.toLowerCase()
+                    );
+                    if (matchingTech) {
+                        this.selectedTechs = [matchingTech.heading];
+                    }
+                }
+            },
+            immediate: true
+        }
     },
     computed: {
         techDropdownOptions(): DropdownOption[] {

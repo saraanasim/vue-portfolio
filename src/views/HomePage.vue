@@ -13,9 +13,9 @@
                 </div>
                 <div class="col-span-3 lg:col-span-1 overflow-y-auto max-h-screen lg:max-h-full">
                     <div class="grid grid-cols-2 gap-2">
-                        <IconItem v-for="tech in TECHNOLOGIES" :key="tech.heading" :rating="tech.rating"
-                            :heading="tech.heading" :subHeading="tech.subHeading"
-                            imageUrl="/src/assets/images/typescript.png" />
+                        <SelectableIconItem v-for="tech in TECHNOLOGIES" :key="tech.heading" :rating="tech.rating"
+                            :heading="tech.heading" :subHeading="tech.subHeading" :imageUrl="tech.imageUrl"
+                            @click="navigateToProjectsWithTech(tech.heading)" />
                     </div>
                 </div>
             </div>
@@ -29,20 +29,20 @@
 
 <script lang="ts">
 import AssetImage from '@/components/home/AssetImage.vue';
-import IconItem from '@/components/shared/IconItem.vue';
+import ConnectModal from '@/components/shared/ConnectModal.vue';
 import SectionContainer from '@/components/shared/SectionContainer.vue';
+import SelectableIconItem from '@/components/shared/SelectableIconItem.vue';
 import { lifecycleLoggerMixin } from '@/mixins/lifecycleLogger.mixin';
 import { ButtonVariants, TECHNOLOGIES } from '@/utils/constants';
-import BaseButton from '../components/shared/BaseButton.vue';
-import ConnectModal from '@/components/shared/ConnectModal.vue';
 import { downloadResume } from '@/utils/helpers';
+import BaseButton from '../components/shared/BaseButton.vue';
 
 export default {
     name: "HomePage",
     components: {
         SectionContainer,
         AssetImage,
-        IconItem,
+        SelectableIconItem,
         BaseButton,
         ConnectModal
     },
@@ -59,6 +59,12 @@ export default {
         },
         downloadResumeFile() {
             downloadResume();
+        },
+        navigateToProjectsWithTech(technology: string) {
+            this.$router.push({
+                name: 'projects',
+                query: { tech: technology }
+            });
         }
     },
     mixins: [lifecycleLoggerMixin],

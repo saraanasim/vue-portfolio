@@ -60,10 +60,10 @@
 
         <!-- Right Section: Minimize and Close Buttons -->
         <div class="h-full flex items-center space-x-2">
-            <button title="Minimize" class="cyber-button">
+            <button title="Minimize" class="cyber-button" @click="showMinimizeModal">
                 <Icon icon="mdi:window-minimize" class="size-6 block" />
             </button>
-            <button title="Close" class="cyber-button">
+            <button title="Close" class="cyber-button" @click="showCloseModal">
                 <Icon icon="mdi:close" class="size-6 block" />
             </button>
         </div>
@@ -100,12 +100,43 @@
             <BaseButton :variant="ButtonVariants.FlatFilled" class="cyber-login-button">Login</BaseButton>
         </div>
     </header>
+
+    <!-- Minimize Modal -->
+    <BaseModal v-model="isMinimizeModalOpen" title="SYSTEM OVERRIDE" accessLevel="ADMIN">
+        <div class="modal-content-custom">
+            <div class="cyberpunk-alert">
+                <Icon icon="mdi:alert-octagon" class="alert-icon" />
+                <div class="message-text">
+                    <p class="blinking-text">SYSTEM NOTIFICATION:</p>
+                    <p>Minimize operation intercepted. This terminal cannot be minimized.</p>
+                    <p>Reason: Critical system functions active.</p>
+                    <p class="tech-text">SYS_CODE: 0x45FD2A</p>
+                </div>
+            </div>
+        </div>
+    </BaseModal>
+
+    <!-- Close Modal -->
+    <BaseModal v-model="isCloseModalOpen" title="TERMINAL ALERT" accessLevel="ADMIN">
+        <div class="modal-content-custom">
+            <div class="cyberpunk-alert">
+                <Icon icon="mdi:robot-dead" class="alert-icon" />
+                <div class="message-text">
+                    <p class="blinking-text">TERMINAL OVERRIDE:</p>
+                    <p>Close request denied. This terminal session is protected.</p>
+                    <p>Continue browsing with current access credentials.</p>
+                    <p class="tech-text">AUTH_LEVEL: VISITOR_ACCESS</p>
+                </div>
+            </div>
+        </div>
+    </BaseModal>
 </template>
 
 <script lang="ts">
 import { ButtonVariants, companyInfo } from '@/utils/constants';
 import { Icon } from '@iconify/vue';
 import BaseButton from './BaseButton.vue';
+import BaseModal from './BaseModal.vue';
 import { getFormattedDateTime } from '@/utils/helpers';
 import { routesConfig } from '@/router';
 
@@ -115,20 +146,29 @@ export default {
     name: 'AppHeader',
     components: {
         Icon,
-        BaseButton
+        BaseButton,
+        BaseModal
     },
     data() {
         return {
             time,
             ButtonVariants,
             companyInfo,
-            routesConfig
+            routesConfig,
+            isMinimizeModalOpen: false,
+            isCloseModalOpen: false
         };
     },
     methods: {
         navigateTo(path: string) {
             console.log({ path })
             this.$router.push(path);
+        },
+        showMinimizeModal() {
+            this.isMinimizeModalOpen = true;
+        },
+        showCloseModal() {
+            this.isCloseModalOpen = true;
         }
     }
 }
@@ -159,8 +199,8 @@ export default {
     background-color: transparent;
     color: #00E5FF;
     border: 1px solid #00E5FF;
-    width: 1.75rem;
-    height: 1.75rem;
+    width: 2.5rem;
+    height: 2.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -226,6 +266,57 @@ export default {
 
 .blink-slow {
     animation: blink 2s step-end infinite;
+}
+
+.modal-content-custom {
+    font-family: monospace;
+    color: #00E5FF;
+}
+
+.cyberpunk-alert {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background-color: rgba(0, 229, 255, 0.05);
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    padding: 1.5rem;
+}
+
+.alert-icon {
+    font-size: 3rem;
+    color: #00E5FF;
+    animation: pulse 2s infinite;
+}
+
+.message-text {
+    flex: 1;
+}
+
+.blinking-text {
+    color: #FF0033;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    animation: blink 1s step-end infinite;
+}
+
+.tech-text {
+    margin-top: 1rem;
+    color: rgba(0, 229, 255, 0.7);
+    font-size: 0.8rem;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes scan-horizontal {
