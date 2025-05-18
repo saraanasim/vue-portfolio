@@ -60,16 +60,49 @@ export function getFormattedDateTime(format: FormatOption) {
  * Downloads the resume file specified in the config
  */
 export const downloadResume = (): void => {
-    const resumeUrl = configData.resumeUrl;
-    const link = document.createElement('a');
-    link.href = resumeUrl;
+    let resumeUrl = configData.resumeUrl;
 
-    // Extract filename from path for the download attribute
-    const fileName = resumeUrl.split('/').pop() || 'resume.pdf';
-    link.download = fileName;
+    // Handle Google Drive links
+    if (resumeUrl.includes('drive.google.com')) {
+        const fileId = resumeUrl.match(/\/d\/(.*?)\/view/)?.[1];
+        if (fileId) {
+            // Convert to direct download link
+            resumeUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
+        }
+    } else if (resumeUrl.startsWith('@/')) {
+        // Handle @ alias for assets
+        resumeUrl = resumeUrl.replace('@/', '/');
+    }
 
-    // Append to body, click and remove
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // Open Google Drive links in new tab due to their authentication requirements
+    if (resumeUrl.includes('drive.google.com')) {
+        window.open(resumeUrl, '_blank');
+        return;
+    }
+
+    // For other files, proceed with direct download
+    fetch(resumeUrl)
+        .then(response => response.blob())
+        .then(blob => {
+            const blobUrl = window.URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = blobUrl;
+
+            // Extract filename from path or use default
+            const fileName = 'resume.pdf';
+            link.download = fileName;
+
+            // Trigger download
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+
+            // Clean up the blob URL
+            window.URL.revokeObjectURL(blobUrl);
+        })
+        .catch(error => {
+            console.error('Error downloading resume:', error);
+            // Fallback to opening in new tab if download fails
+            window.open(resumeUrl, '_blank');
+        });
 };
