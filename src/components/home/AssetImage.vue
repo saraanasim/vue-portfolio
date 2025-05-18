@@ -4,8 +4,7 @@
         <div class="absolute inset-0 flex bg-black bg-opacity-50">
             <div class="w-full mx-4 my-2 border-2 border-dimmest-text grid grid-cols-2 text-white-text font-bold">
                 <div class="col-span-1 flex flex-col justify-start items-start pt-2 pl-2 ">
-                    <p class="text-xs sm:text-sm md:text-base">/FULL_STACK_DEV</p>
-                    <p class="font-extrabold text-lt-blue-hl text-sm sm:text-base md:text-lg">SARAAN ASIM</p>
+                    <p class="text-xs sm:text-sm md:text-base text-lt-blue-hl">/FULL_STACK_DEV</p>
                 </div>
                 <div class="col-span-1 flex justify-end pt-2 pr-2">
                     <div class="flex flex-col items-end gap-2">

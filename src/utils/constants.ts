@@ -47,7 +47,7 @@ export enum ButtonVariants {
 }
 
 export const companyInfo = {
-    name: "Saraan Techworks",
+    name: "Saraan Asim",
     slogan: "Innovative Solutions for Your Tech Challenges",
 }
 

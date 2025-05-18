@@ -23,6 +23,9 @@ const handleLoaderDisplay = () => {
       setShowAppLoader(new Date().getTime()); // Update last shown time
     }, APP_LOADER_DURATION); // Adjust the duration based on actual use case
   }
+  else {
+    showLoader.value = false;
+  }
 };
 
 // On mount, check if the loader should be displayed

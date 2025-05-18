@@ -1,14 +1,20 @@
 <template>
     <div class="text-logo">
-        <h1 class="text-logo__text">Saraan Techworks</h1>
+        <h1 class="text-logo__text">{{ companyInfo.name }}</h1>
     </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { companyInfo } from '@/utils/constants';
 
 export default defineComponent({
     name: 'TextLogo',
+    data() {
+        return {
+            companyInfo
+        };
+    },
 });
 </script>
 

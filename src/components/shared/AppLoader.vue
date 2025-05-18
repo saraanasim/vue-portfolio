@@ -1,7 +1,7 @@
 <template>
     <div class="app-loader">
         <div class="loader-container">
-            <AppLoader class="loader" :size="LoaderSizes.LARGE" />
+            <Loader class="loader" :size="LoaderSizes.LARGE" />
         </div>
     </div>
 </template>
@@ -9,12 +9,12 @@
 <script lang="ts">
 import { LoaderSizes } from '@/utils/constants';
 import { defineComponent } from 'vue';
-import AppLoader from './Loader.vue';
+import Loader from './Loader.vue';
 
 export default defineComponent({
     name: 'AppLoader',
     components: {
-        AppLoader
+        Loader
     },
     data() {
         return {
@@ -29,7 +29,7 @@ export default defineComponent({
     position: relative;
     height: 100vh;
     width: 100vw;
-    background-color: var(--background-light);
+    background-color: #021114;
     overflow: hidden;
     /* Ensure grid doesn't overflow the container */
 }
@@ -42,6 +42,6 @@ export default defineComponent({
     z-index: 50;
     width: fit-content;
     height: fit-content;
-    background-color: var(--background-light);
+    background-color: #021114;
 }
 </style>
