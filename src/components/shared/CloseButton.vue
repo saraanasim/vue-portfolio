@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <button title="Close" class="cyber-button" @click="showCloseModal">
+    <div class="w-full">
+        <button title="Close" class="cyber-button w-full" @click="showCloseModal">
             <template v-if="text">
                 {{ text }}
             </template>

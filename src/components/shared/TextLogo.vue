@@ -1,12 +1,13 @@
 <template>
     <div class="text-logo">
-        <h1 class="text-logo__text">{{ companyInfo.name }}</h1>
+        <h1 class="text-logo__text" @click="goToHome">{{ companyInfo.name }}</h1>
     </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { companyInfo } from '@/utils/constants';
+import { routesConfig } from '@/router';
 
 export default defineComponent({
     name: 'TextLogo',
@@ -15,6 +16,11 @@ export default defineComponent({
             companyInfo
         };
     },
+    methods: {
+        goToHome() {
+            this.$router.push(routesConfig.HOME.path);
+        }
+    }
 });
 </script>
 
@@ -25,6 +31,7 @@ export default defineComponent({
     align-items: center;
     width: 100%;
     height: 100%;
+    cursor: pointer;
 }
 
 .text-logo__text {

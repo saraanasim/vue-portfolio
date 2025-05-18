@@ -26,27 +26,27 @@
                         <div class="flex px-2 py-1 bg-gray-bg border-b border-dimmest-text">
                             <div class="flex-1 flex items-center">
                                 <BaseButton :variant="ButtonVariants.Flat" :isActive="sortKey === 'name'"
-                                    @click="sortBy('name')" class="text-left">
+                                    @click="sortBy('name')" class="text-sm">
                                     NAME
                                 </BaseButton>
                                 <span v-if="sortKey === 'name'" class="ml-1">{{ sortOrder === 'asc' ? '▲' : '▼'
-                                    }}</span>
+                                }}</span>
                             </div>
                             <div class="w-28 flex items-center">
                                 <BaseButton :variant="ButtonVariants.Flat" :isActive="sortKey === 'size'"
-                                    @click="sortBy('size')" class="text-left">
+                                    @click="sortBy('size')" class="text-sm">
                                     SIZE
                                 </BaseButton>
                                 <span v-if="sortKey === 'size'" class="ml-1">{{ sortOrder === 'asc' ? '▲' : '▼'
-                                    }}</span>
+                                }}</span>
                             </div>
                             <div class="w-28 flex items-center">
                                 <BaseButton :variant="ButtonVariants.Flat" :isActive="sortKey === 'type'"
-                                    @click="sortBy('type')" class="text-left">
+                                    @click="sortBy('type')" class="text-sm">
                                     TYPE
                                 </BaseButton>
                                 <span v-if="sortKey === 'type'" class="ml-1">{{ sortOrder === 'asc' ? '▲' : '▼'
-                                    }}</span>
+                                }}</span>
                             </div>
                         </div>
 
@@ -107,7 +107,7 @@
                         <div class="detail-value">
                             <a :href="selectedProject.githubUrl" target="_blank" class="link">{{
                                 selectedProject.githubUrl
-                            }}</a>
+                                }}</a>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-dark-bg border border-cyan p-1">
+    <div class="bg-dark-bg border border-cyan p-1" @click="goToHome">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496" :class="`${size} text-cyan`">
             <path fill="currentColor" opacity="1" stroke="none" d="
             M277.000000,497.000000 
@@ -51,12 +51,19 @@
 </template>
 
 <script lang="ts">
+import { routesConfig } from '@/router';
+
 export default {
     name: 'AppLogo',
     props: {
         size: {
             type: String,
             default: 'w-12 h-12'
+        }
+    },
+    methods: {
+        goToHome() {
+            this.$router.push(routesConfig.HOME.path);
         }
     }
 }
@@ -65,6 +72,7 @@ export default {
 <style scoped>
 .bg-dark-bg {
     background-color: #021114;
+    cursor: pointer;
 }
 
 .text-cyan {

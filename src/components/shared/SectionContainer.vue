@@ -1,11 +1,11 @@
 <template>
     <div class="cyber-container w-full h-full flex flex-col gap-4 px-2 sm:px-4">
         <div class="hidden sm:grid grid-cols-1 lg:grid-cols-3 gap-4 mt-4">
-            <div class="col-span-1 flex justify-center">
+            <div class="col-span-1 flex justify-center sm:hidden lg:block">
                 <TextLogo />
             </div>
             <div class="col-span-1 lg:col-span-2 flex items-end">
-                <div class="w-full grid grid-cols-2 gap-2 border-b-[0.1rem] border-cyan py-2">
+                <div class="w-full grid grid-cols-2 gap-2 border-b-[0.1rem] border-cyan pb-2">
                     <div
                         class="col-span-2 lg:col-span-1 border-b-[0.1rem] lg:border-b-0 border-x-[0.1rem] border-t-[0.1rem] border-cyan rounded-[2px] cyber-title-panel">
                         <div class="status-bar">

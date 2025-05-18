@@ -176,6 +176,7 @@ export default {
 }
 
 .close-section {
+    width: 100%;
     margin-top: auto;
     padding-top: 1rem;
     border-top: 1px solid rgba(0, 229, 255, 0.3);

@@ -1,6 +1,6 @@
 <template>
     <button :class="[
-        'w-full h-full min-size-1 max-h-10 transition-transform duration-200 ease-in-out',
+        'w-full h-full min-size-1 max-h-8 transition-transform duration-200 ease-in-out',
         { 'opacity-50 cursor-not-allowed': isDisabled },
         { 'bg-dark-bg font-bold text-cyan transform hover:scale-95 cyber-typewriter': variant === ButtonVariants.TypeWriter },
         { 'bg-transparent text-cyan hover:text-green-hl cyber-flat': variant === ButtonVariants.Flat },
