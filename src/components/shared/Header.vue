@@ -97,6 +97,9 @@
 
         <!-- Right Section: Login and Logout Buttons -->
         <div class="h-full flex items-center gap-2 bg-dark-bg border border-cyan font-bold font-mono">
+            <button class="cyber-button lg:hidden" @click="toggleMobileSidebar">
+                <Icon icon="mdi:menu" class="size-6" />
+            </button>
             <BaseButton :variant="ButtonVariants.FlatFilled" class="cyber-login-button" @click="showLoginModal">Login
             </BaseButton>
         </div>
@@ -194,6 +197,9 @@
             <button class="action-btn danger-btn" @click="acknowledgeBlockedStatus">ACKNOWLEDGE</button>
         </template>
     </BaseModal>
+
+    <!-- MobileSidebar component -->
+    <MobileSidebar v-model:isOpen="isMobileSidebarOpen" />
 </template>
 
 <script lang="ts">
@@ -203,6 +209,7 @@ import BaseButton from './BaseButton.vue';
 import BaseModal from './BaseModal.vue';
 import { getFormattedDateTime } from '@/utils/helpers';
 import { routesConfig } from '@/router';
+import MobileSidebar from './MobileSidebar.vue';
 
 const time = getFormattedDateTime('time')
 
@@ -211,7 +218,8 @@ export default {
     components: {
         Icon,
         BaseButton,
-        BaseModal
+        BaseModal,
+        MobileSidebar
     },
     data() {
         return {
@@ -224,6 +232,7 @@ export default {
             isLoginModalOpen: false,
             isAccessDeniedModalOpen: false,
             isUserBlockedModalOpen: false,
+            isMobileSidebarOpen: false,
             loginForm: {
                 username: '',
                 password: ''
@@ -292,6 +301,9 @@ export default {
         generateLockdownId() {
             // Generate a random hex ID
             return Math.floor(Math.random() * 16777215).toString(16).toUpperCase().padStart(6, '0');
+        },
+        toggleMobileSidebar() {
+            this.isMobileSidebarOpen = !this.isMobileSidebarOpen;
         }
     }
 }
