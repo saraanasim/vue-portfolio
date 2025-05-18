@@ -3,27 +3,27 @@
   "socials": [
     {
       "name": "GitHub",
-      "url": "https://github.com/yourusername",
+      "url": "https://github.com/saraanasim",
       "icon": "mdi:github"
     },
     {
       "name": "LinkedIn",
-      "url": "https://linkedin.com/in/yourusername",
+      "url": "https://linkedin.com/in/saraan-asim",
       "icon": "mdi:linkedin"
     },
     {
-      "name": "Twitter",
-      "url": "https://twitter.com/yourusername",
+      "name": "X",
+      "url": "https://x.com/asimsaraan",
       "icon": "mdi:twitter"
     },
     {
       "name": "Email",
-      "url": "mailto:your.email@example.com",
+      "url": "mailto:saraanofficial@gmail.com",
       "icon": "mdi:email"
     },
     {
       "name": "Medium",
-      "url": "https://medium.com/@yourusername",
+      "url": "https://medium.com/@saraanofficial",
       "icon": "mdi:medium"
     }
   ]

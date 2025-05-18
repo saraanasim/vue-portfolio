@@ -1,206 +1,155 @@
 [
   {
     "id": 1,
-    "name": "Portfolio Website",
-    "size": "507.9 MB",
-    "type": "Frontend",
+    "name": "Deep Lawn",
+    "size": "2.8 GB",
+    "type": "Full Stack",
     "icon": "folder",
-    "description": "Personal portfolio website built with Vue.js and TypeScript",
-    "url": "https://portfolio.example.com",
-    "githubUrl": "https://github.com/username/portfolio",
-    "technologies": ["Typescript", "Vue.js", "JavaScript"],
-    "image": "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "description": "AI-based lawn measurements and sales tool with over 600 registered companies",
+    "url": "https://deeplawn.com",
+    "githubUrl": "https://github.com/saraanasim/deep-lawn",
+    "technologies": ["Next.js", "Nest.js", "AI", "Stripe"],
+    "image": "https://images.unsplash.com/photo-1589923188900-85dd9aca9dab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "paragraphs": [
-      "A modern, responsive portfolio website showcasing my skills and projects.",
-      "Designed with a focus on clean UI/UX and optimal performance across devices.",
-      "Implemented using Vue.js 3 and TypeScript to ensure type safety and maintainability."
+      "AI-based lawn measurements and sales tool serving over 600 registered companies.",
+      "Developed modules for branding, widget integration, aerial HD imagery, and Stripe subscriptions.",
+      "Integrated Real Green API, Clover Card, and implemented Selenium automation for testing."
     ]
   },
   {
     "id": 2,
-    "name": "Task Management API",
-    "size": "851.3 MB",
-    "type": "Backend",
+    "name": "Market Makers",
+    "size": "1.5 GB",
+    "type": "Full Stack",
     "icon": "folder",
-    "description": "RESTful API for task management application",
-    "url": "https://api.tasks.example.com",
-    "githubUrl": "https://github.com/username/task-api",
-    "technologies": ["Node.js", "JavaScript", "AWS"],
-    "image": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "description": "AI-driven research tool with real-time financial information and trading game",
+    "url": "https://www.marketmakers.com",
+    "githubUrl": "https://github.com/saraanasim/market-makers",
+    "technologies": ["MERN", "AI", "AWS"],
+    "image": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "paragraphs": [
-      "Scalable REST API built with Node.js and Express for managing tasks and projects.",
-      "Features include user authentication, task scheduling, and notifications.",
-      "Deployed on AWS using containerization for improved scalability and reliability."
+      "AI-driven research tool providing real-time financial information and algorithmic investment insights.",
+      "Developed the Historic Calendar module for tracking financial data and trading patterns.",
+      "Implemented features to help users stay ahead in the global markets with advanced analytics."
     ]
   },
   {
     "id": 3,
-    "name": "E-commerce Platform",
-    "size": "16.8 GB",
+    "name": "Service Cart",
+    "size": "950 MB",
     "type": "Full Stack",
     "icon": "folder",
-    "description": "Complete e-commerce solution with admin dashboard",
-    "url": "https://shop.example.com",
-    "githubUrl": "https://github.com/username/ecommerce",
-    "technologies": ["React", "Node.js", "AWS", "Docker"],
-    "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "description": "AI-based property measurements and instant quotes for cleaning companies",
+    "url": "https://servicecart.io",
+    "githubUrl": "https://github.com/saraanasim/service-cart",
+    "technologies": ["Next.js", "Nest.js", "AWS S3", "Card Connect API"],
+    "image": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "paragraphs": [
-      "Full-featured e-commerce platform with customer-facing storefront and admin dashboard.",
-      "Includes inventory management, order processing, payment integration, and analytics.",
-      "Built with React frontend and Node.js backend, hosted on AWS infrastructure."
+      "Sister project of Deep Lawn focusing on AI-based property measurements for cleaning companies.",
+      "Implemented Paddle payment processing, Card Connect API integration, and custom flows for contractors.",
+      "Led product initial release and coordinated data migration efforts for seamless operation."
     ]
   },
   {
     "id": 4,
-    "name": "Analytics Dashboard",
-    "size": "814 KB",
-    "type": "Frontend",
+    "name": "Dogwood Analytics",
+    "size": "820 MB",
+    "type": "Full Stack",
     "icon": "folder",
-    "description": "Real-time analytics dashboard for business metrics",
-    "url": "https://analytics.example.com",
-    "githubUrl": "https://github.com/username/analytics",
-    "technologies": ["Vue.js", "Typescript", "Jest"],
+    "description": "Tailored hybrid software program that performs as a business intelligence tool",
+    "url": "https://www.dogwoodsuite.com",
+    "githubUrl": "https://github.com/saraanasim/dogwood-analytics",
+    "technologies": ["React.js", "Firebase"],
     "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "paragraphs": [
-      "Interactive dashboard for visualizing business KPIs and performance metrics in real-time.",
-      "Features customizable widgets, data filtering, and export functionality.",
-      "Built with Vue.js and D3.js for responsive and interactive data visualizations."
+      "A tailored hybrid software solution that serves as a comprehensive business intelligence tool.",
+      "Developed the initial structure, admin dashboard, employee portal, and CSR dashboards with sales analytics.",
+      "Implemented settings module and handled staging deployment for efficient testing and iteration."
     ]
   },
   {
     "id": 5,
-    "name": "Content Management System",
-    "size": "90.2 MB",
+    "name": "KGHYPE - Taobao Agent",
+    "size": "1.2 GB",
     "type": "Full Stack",
     "icon": "folder",
-    "description": "Custom CMS for managing digital content",
-    "url": "https://cms.example.com",
-    "githubUrl": "https://github.com/username/cms",
-    "technologies": ["WordPress", "JavaScript"],
-    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "description": "Shipping and logistics platform for Taobao purchases",
+    "url": "https://www.kghype.com",
+    "githubUrl": "https://github.com/saraanasim/kghype",
+    "technologies": ["MERN"],
+    "image": "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "paragraphs": [
-      "Custom content management system for digital publishers and content creators.",
-      "Supports various content types, media management, and publishing workflows.",
-      "Built on WordPress core with extensive customizations for improved performance."
+      "Comprehensive shipping and logistics platform serving as a Taobao agent for international customers.",
+      "Developed affiliate marketing page to increase user engagement and conversion rates.",
+      "Created advanced shipping calculation algorithm and implemented robust search functionality."
     ]
   },
   {
     "id": 6,
-    "name": "Mobile Weather App",
-    "size": "4.2 GB",
-    "type": "Mobile",
+    "name": "Ready To Munch",
+    "size": "750 MB",
+    "type": "Frontend",
     "icon": "folder",
-    "description": "Weather forecasting mobile application",
-    "url": "https://weather.example.com",
-    "githubUrl": "https://github.com/username/weather-app",
-    "technologies": ["React", "JavaScript", "AWS"],
-    "image": "https://images.unsplash.com/photo-1530908295418-a12e326966ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "description": "Online food ordering platform for a Pakistan-based company",
+    "url": "https://readytomunch.com",
+    "githubUrl": "https://github.com/saraanasim/ready-to-munch",
+    "technologies": ["React.js", "Firebase"],
+    "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "paragraphs": [
-      "Cross-platform mobile app providing accurate weather forecasts and alerts.",
-      "Features include hourly and weekly forecasts, radar maps, and severe weather notifications.",
-      "Built with React Native and integrates with multiple weather data providers."
+      "Online food ordering platform developed for a Pakistan-based food delivery company.",
+      "Designed and implemented responsive website UI for optimal user experience across devices.",
+      "Created dynamic blog pages to improve SEO and user engagement with the platform."
     ]
   },
   {
     "id": 7,
-    "name": "Machine Learning Service",
-    "size": "1.1 GB",
-    "type": "Backend",
+    "name": "Sachin Jha Blog",
+    "size": "250 MB",
+    "type": "Frontend",
     "icon": "folder",
-    "description": "ML service for data classification and prediction",
-    "url": "https://ml.example.com",
-    "githubUrl": "https://github.com/username/ml-service",
-    "technologies": ["Python", "Docker", "AWS"],
-    "image": "https://images.unsplash.com/photo-1527474305487-b87b222841cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "description": "Blog website for an India-based cloud solutions expert",
+    "url": "https://sachcode.com",
+    "githubUrl": "https://github.com/saraanasim/sachin-jha-blog",
+    "technologies": ["Gatsby.js", "Netlify CMS"],
+    "image": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "paragraphs": [
-      "Machine learning microservice for data classification and predictive analytics.",
-      "Implements various ML algorithms for text analysis, recommendation systems, and anomaly detection.",
-      "Deployed as containerized service on AWS with auto-scaling capabilities."
+      "Blog website developed for an India-based cloud solutions expert to share technical knowledge.",
+      "Integrated Netlify CMS for easy content management and publishing workflow.",
+      "Implemented dynamic blogs with Gatsby's server-side rendering for improved performance and SEO."
     ]
   },
   {
     "id": 8,
-    "name": "Blockchain Explorer",
-    "size": "15.4 KB",
+    "name": "David Secul Portfolio",
+    "size": "320 MB",
     "type": "Frontend",
     "icon": "folder",
-    "description": "Tool for visualizing blockchain transactions",
-    "url": "https://blockchain.example.com",
-    "githubUrl": "https://github.com/username/blockchain-explorer",
-    "technologies": ["Typescript", "React", "Node.js"],
-    "image": "https://images.unsplash.com/photo-1516245834210-c4c142787335?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "description": "Portfolio website for a US-based entrepreneur",
+    "url": "https://davidsecul.com",
+    "githubUrl": "https://github.com/saraanasim/david-secul",
+    "technologies": ["React.js"],
+    "image": "https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "paragraphs": [
-      "Web application for exploring and visualizing blockchain transactions and data.",
-      "Features include transaction history, block details, and address information.",
-      "Built with React and integrates with multiple blockchain networks."
+      "Professional portfolio website for a US-based entrepreneur to showcase services and projects.",
+      "Designed and implemented responsive UI focusing on professional presentation and brand identity.",
+      "Created form-based website update mechanism for easy content management without technical expertise."
     ]
   },
   {
     "id": 9,
-    "name": "Social Media Dashboard",
-    "size": "3.2 GB",
+    "name": "Xsisec Portfolio",
+    "size": "280 MB",
     "type": "Full Stack",
     "icon": "folder",
-    "description": "Unified dashboard for managing multiple social media accounts",
-    "url": "https://social.example.com",
-    "githubUrl": "https://github.com/username/social-dashboard",
-    "technologies": ["Vue.js", "Node.js", "MongoDB"],
-    "image": "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "description": "Portfolio website for a Denmark-based senior software tester",
+    "url": "https://xsisec.com",
+    "githubUrl": "https://github.com/saraanasim/xsisec",
+    "technologies": ["MERN"],
+    "image": "https://images.unsplash.com/photo-1503437313881-503a91226402?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "paragraphs": [
-      "Comprehensive dashboard for managing and analyzing multiple social media accounts.",
-      "Features include content scheduling, analytics, and engagement tracking.",
-      "Built with Vue.js frontend and Node.js backend with MongoDB for data storage."
-    ]
-  },
-  {
-    "id": 10,
-    "name": "Video Streaming Platform",
-    "size": "25.7 GB",
-    "type": "Full Stack",
-    "icon": "folder",
-    "description": "Custom video hosting and streaming service",
-    "url": "https://video.example.com",
-    "githubUrl": "https://github.com/username/video-platform",
-    "technologies": ["React", "Node.js", "AWS", "FFmpeg"],
-    "image": "https://images.unsplash.com/photo-1536240478700-b869070f9279?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-    "paragraphs": [
-      "Scalable video hosting and streaming platform with adaptive bitrate playback.",
-      "Features include video transcoding, content protection, and analytics.",
-      "Built with React frontend and Node.js backend, leveraging AWS media services."
-    ]
-  },
-  {
-    "id": 11,
-    "name": "IoT Home Automation",
-    "size": "780 MB",
-    "type": "Full Stack",
-    "icon": "folder",
-    "description": "Smart home automation system using IoT devices",
-    "url": "https://home.example.com",
-    "githubUrl": "https://github.com/username/iot-home",
-    "technologies": ["Python", "React", "MQTT", "Raspberry Pi"],
-    "image": "https://images.unsplash.com/photo-1558002038-1055e2e28ed1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-    "paragraphs": [
-      "Comprehensive home automation system integrating various IoT devices and sensors.",
-      "Features include lighting control, climate monitoring, and security management.",
-      "Built with Python backend, React frontend, and MQTT messaging protocol."
-    ]
-  },
-  {
-    "id": 12,
-    "name": "AR Navigation App",
-    "size": "5.1 GB",
-    "type": "Mobile",
-    "icon": "folder",
-    "description": "Augmented reality navigation application",
-    "url": "https://ar-nav.example.com",
-    "githubUrl": "https://github.com/username/ar-navigation",
-    "technologies": ["Swift", "ARKit", "MapKit"],
-    "image": "https://images.unsplash.com/photo-1527856263669-12c3a0af2aa6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-    "paragraphs": [
-      "Mobile application utilizing augmented reality for enhanced navigation and wayfinding.",
-      "Features include AR direction overlay, points of interest, and offline maps.",
-      "Built with Swift and ARKit for iOS with real-time location tracking."
+      "Professional portfolio website for a Denmark-based senior software tester to showcase expertise.",
+      "Developed UI with focus on professional presentation of testing services and portfolio projects.",
+      "Implemented form-based website update mechanism for easy content management by the client."
     ]
   }
 ]
