@@ -151,5 +151,124 @@
       "Developed UI with focus on professional presentation of testing services and portfolio projects.",
       "Implemented form-based website update mechanism for easy content management by the client."
     ]
+  },
+  {
+    "id": 10,
+    "name": "Vast Studio",
+    "size": "1.7 GB",
+    "type": "Full Stack",
+    "icon": "folder",
+    "description": "Architecture-first intelligent code editor with AI integration",
+    "url": "https://www.getvast.app/",
+    "githubUrl": "https://github.com/saraanasim/vast-studio",
+    "technologies": ["Next.js", "TypeScript", "OpenAI", "Tailwind CSS"],
+    "image": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "paragraphs": [
+      "Modern intelligent code editor that understands project requirements and automates code generation.",
+      "Built with architecture-first approach enabling users to configure API routes and database entities visually.",
+      "Integrated AI engine for intelligent suggestions and built-in best practices with real-time diagnostic feedback."
+    ]
+  },
+  {
+    "id": 11,
+    "name": "TripTalk",
+    "size": "890 MB",
+    "type": "Full Stack",
+    "icon": "folder",
+    "description": "Travel social platform for sharing experiences and recommendations",
+    "url": "https://triptalk.app/",
+    "githubUrl": "https://github.com/saraanasim/triptalk",
+    "technologies": ["React", "Node.js", "MongoDB", "Google Maps API"],
+    "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "paragraphs": [
+      "Interactive social platform for travelers to share experiences, itineraries and destination recommendations.",
+      "Implemented location-based searching with Google Maps integration and user-generated content features.",
+      "Created responsive UI optimized for both mobile and desktop with real-time notifications and messaging."
+    ]
+  },
+  {
+    "id": 12,
+    "name": "ILM UK",
+    "size": "450 MB",
+    "type": "Frontend",
+    "icon": "folder",
+    "description": "Educational resource platform for UK-based Islamic organization",
+    "url": "https://ilmuk.org/",
+    "githubUrl": "https://github.com/saraanasim/ilm-uk",
+    "technologies": ["React", "JavaScript", "Firebase"],
+    "image": "https://images.unsplash.com/photo-1577996693134-e05f5e0b7f38?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "paragraphs": [
+      "Resource platform for UK-based Islamic educational organization providing learning materials and community resources.",
+      "Designed responsive interface with accessibility features to ensure content availability for all users.",
+      "Integrated content management system allowing administrators to easily update educational materials."
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Premier Vet Alliance",
+    "size": "1.3 GB",
+    "type": "Full Stack",
+    "icon": "folder",
+    "description": "Comprehensive platform for veterinary services and pet care management",
+    "url": "https://premiervetalliance.com/",
+    "githubUrl": "https://github.com/saraanasim/premier-vet",
+    "technologies": ["React", "Node.js", "PostgreSQL", "Stripe"],
+    "image": "https://images.unsplash.com/photo-1548767797-d8c844163c4c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "paragraphs": [
+      "Comprehensive platform for veterinary service providers with integrated financial and pet owner management tools.",
+      "Created separate interfaces for pet owners and veterinary professionals with role-based access controls.",
+      "Implemented secure payment processing and financial management features compliant with FCA regulations."
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Manage Nail Shops",
+    "size": "780 MB",
+    "type": "Full Stack",
+    "icon": "folder",
+    "description": "Modern management application for nail salon businesses",
+    "url": "https://dev.managenailshops.com",
+    "githubUrl": "https://github.com/saraanasim/nail-shops",
+    "technologies": ["React", "Node.js", "MongoDB", "Google Analytics"],
+    "image": "https://images.unsplash.com/photo-1610297646747-55fdbf4e1b5f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "paragraphs": [
+      "Streamlined management application for nail salon owners featuring detailed reporting and advanced analytics.",
+      "Developed customer-centric features including effortless check-in, swift check-out, and appointment scheduling.",
+      "Created owner dashboard with business insights, performance metrics, and operational efficiency tools."
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Podly",
+    "size": "650 MB",
+    "type": "Full Stack",
+    "icon": "folder",
+    "description": "Podcast streaming and management platform with creator tools",
+    "url": "https://d20nesg77htt3q.cloudfront.net/",
+    "githubUrl": "https://github.com/saraanasim/podly",
+    "technologies": ["React", "Node.js", "AWS", "Eleven Labs"],
+    "image": "https://images.unsplash.com/photo-1589903308904-1010c2294adc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "paragraphs": [
+      "Innovative podcast platform with streaming capabilities and advanced tools for content creators.",
+      "Implemented cloud-based audio processing using AWS and voice enhancement technologies.",
+      "Created audience analytics dashboard and monetization features for podcast creators."
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Portuguese Grammar App",
+    "size": "420 MB",
+    "type": "Frontend",
+    "icon": "folder",
+    "description": "Interactive language learning tool for Portuguese grammar practice",
+    "url": "http://13.48.239.202:5173/",
+    "githubUrl": "https://github.com/saraanasim/portuguese-grammar",
+    "technologies": ["Vue.js", "JavaScript", "FastAPI", "AWS"],
+    "image": "https://images.unsplash.com/photo-1546704864-07236eba606e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "paragraphs": [
+      "Educational application providing interactive exercises and lessons for Portuguese language learners.",
+      "Developed spaced repetition system for vocabulary and grammar practice with progress tracking.",
+      "Implemented audio pronunciation features and personalized learning paths based on user performance."
+    ]
   }
 ]
