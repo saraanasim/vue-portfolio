@@ -7,12 +7,14 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: process.env.NODE_ENV === "development" ? "/" : "/vue-portfolio/",
+  base: "/vue-portfolio/",
+  // base: "/",
   plugins: [
     vue(),
     vueJsx(),
     vueDevTools(),
   ],
+  assetsInclude: ['**/*.png', '**/*.pdf'],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))

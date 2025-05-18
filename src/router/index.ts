@@ -54,7 +54,7 @@ const routesConfig: Record<'HOME' | 'PROJECTS' | 'EXPERIMENTS' | 'ARTICLES', Rou
 const routes: RouteRecordRaw[] = Object.values(routesConfig)
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory(import.meta.env.BASE_URL),
     routes
 });
 

@@ -10,7 +10,7 @@
             <div class="w-full grid grid-cols-3 gap-2">
                 <div
                     class="col-span-3 lg:col-span-2 flex flex-col justify-center border-t-4 border-green-hl relative overflow-hidden">
-                    <AssetImage imageSrc="/src/assets/images/saraan-1.png" />
+                    <AssetImage :imageSrc="myImage" />
                     <div class="cyber-scanline"></div>
                 </div>
                 <div class="col-span-3 lg:col-span-1 overflow-y-auto max-h-screen lg:max-h-full">
@@ -38,7 +38,7 @@ import { lifecycleLoggerMixin } from '@/mixins/lifecycleLogger.mixin';
 import { ButtonVariants, TECHNOLOGIES } from '@/utils/constants';
 import { downloadResume } from '@/utils/helpers';
 import BaseButton from '../components/shared/BaseButton.vue';
-
+import myImage from '@/assets/images/saraan-1.png';
 export default {
     name: "HomePage",
     components: {
@@ -52,7 +52,8 @@ export default {
         return {
             TECHNOLOGIES,
             ButtonVariants,
-            isConnectModalOpen: false
+            isConnectModalOpen: false,
+            myImage
         };
     },
     methods: {

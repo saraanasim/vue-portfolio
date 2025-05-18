@@ -1,5 +1,38 @@
 export const APP_LOADER_DURATION = 3 * 1000 //3 Seconds
 export const APP_LOADER_TIMEOUT = 15 * 60 * 1000; // 15 minutes in milliseconds
+import typescriptImg from '@/assets/images/typescript.png';
+import javascriptImg from '@/assets/images/javascript.png';
+import vuejsImg from '@/assets/images/vuejs.png';
+import reactImg from '@/assets/images/react.png';
+import pythonImg from '@/assets/images/python.png';
+import nodeImg from '@/assets/images/node.png';
+import dockerImg from '@/assets/images/docker.png';
+import awsImg from '@/assets/images/aws.png';
+import wordPressImg from '@/assets/images/wordPress.png';
+import jestImg from '@/assets/images/jest.png';
+import mongoImg from '@/assets/images/mongo.png';
+import expressImg from '@/assets/images/Express.png';
+import graphqlImg from '@/assets/images/GraphQL.png';
+import reduxImg from '@/assets/images/Redux.png';
+import googleMapsImg from '@/assets/images/Google.png';
+import stripeImg from '@/assets/images/stripe.png';
+import firebaseImg from '@/assets/images/Firebase.png';
+import seleniumImg from '@/assets/images/Selenium.png';
+import githubActionsImg from '@/assets/images/GitHub Actions.png';
+import auth0Img from '@/assets/images/auth0.png';
+import analyticsImg from '@/assets/images/analaytics.png';
+import nextImg from '@/assets/images/Next.js.png';
+import strapiImg from '@/assets/images/strapi.png';
+import payloadImg from '@/assets/images/payload.png';
+import netlifyCmsImg from '@/assets/images/netlify-cms.png';
+import openaiImg from '@/assets/images/openai.png';
+import elevenLabsImg from '@/assets/images/elevenlabs.png';
+import nestjsImg from '@/assets/images/nestjs.png';
+import postgresqlImg from '@/assets/images/postgresql.png';
+import supabaseImg from '@/assets/images/supabase.png';
+import fastapiImg from '@/assets/images/fastapi.png';
+import tailwindImg from '@/assets/images/tailwind.png';
+
 
 export enum LoaderSizes {
     SMALL = 'var(--loader-size-small)',
@@ -43,192 +76,192 @@ export const TECHNOLOGIES = [
         rating: 10,
         heading: 'Typescript',
         subHeading: Categories.ProgrammingLanguage,
-        imageUrl: '/src/assets/images/typescript.png',
+        imageUrl: typescriptImg,
     },
     {
         rating: 9,
         heading: 'JavaScript',
         subHeading: Categories.ProgrammingLanguage,
-        imageUrl: '/src/assets/images/javascript.png',
+        imageUrl: javascriptImg,
     },
     {
         rating: 8,
         heading: 'Vue.js',
         subHeading: Categories.FrontendFramework,
-        imageUrl: '/src/assets/images/vuejs.png',
+        imageUrl: vuejsImg,
     },
     {
         rating: 7,
         heading: 'React',
         subHeading: Categories.FrontendFramework,
-        imageUrl: '/src/assets/images/react.png',
+        imageUrl: reactImg,
     },
     {
         rating: 9,
         heading: 'Python',
         subHeading: Categories.ProgrammingLanguage,
-        imageUrl: '/src/assets/images/python.png',
+        imageUrl: pythonImg,
     },
     {
         rating: 8,
         heading: 'Node.js',
         subHeading: Categories.BackendFramework,
-        imageUrl: '/src/assets/images/node.png',
+        imageUrl: nodeImg,
     },
     {
         rating: 7,
         heading: 'Docker',
         subHeading: Categories.DevOpsTool,
-        imageUrl: '/src/assets/images/docker.png',
+        imageUrl: dockerImg,
     },
     {
         rating: 6,
         heading: 'AWS',
         subHeading: Categories.CloudService,
-        imageUrl: '/src/assets/images/aws.png',
+        imageUrl: awsImg,
     },
     {
         rating: 7,
         heading: 'WordPress',
         subHeading: Categories.CMS,
-        imageUrl: '/src/assets/images/wordPress.png',
+        imageUrl: wordPressImg,
     },
     {
         rating: 8,
         heading: 'Jest',
         subHeading: Categories.TestingFramework,
-        imageUrl: '/src/assets/images/jest.png',
+        imageUrl: jestImg,
     },
     {
         rating: 8,
         heading: 'MongoDB',
         subHeading: Categories.Database,
-        imageUrl: '/src/assets/images/mongo.png',
+        imageUrl: mongoImg,
     },
     {
         rating: 7,
         heading: 'Express.js',
         subHeading: Categories.BackendFramework,
-        imageUrl: '/src/assets/images/Express.png',
+        imageUrl: expressImg,
     },
     {
         rating: 6,
         heading: 'GraphQL',
         subHeading: Categories.Library,
-        imageUrl: '/src/assets/images/GraphQL.png',
+        imageUrl: graphqlImg,
     },
     {
         rating: 7,
         heading: 'Redux',
         subHeading: Categories.Library,
-        imageUrl: '/src/assets/images/Redux.png',
+        imageUrl: reduxImg,
     },
     {
         rating: 8,
         heading: 'Google Maps API',
         subHeading: Categories.ThirdPartyAPI,
-        imageUrl: '/src/assets/images/Google.png',
+        imageUrl: googleMapsImg,
     },
     {
         rating: 9,
         heading: 'Stripe',
         subHeading: Categories.PaymentProcessor,
-        imageUrl: '/src/assets/images/stripe.png',
+        imageUrl: stripeImg,
     },
     {
         rating: 7,
         heading: 'Firebase',
         subHeading: Categories.ThirdPartyAPI,
-        imageUrl: '/src/assets/images/Firebase.png',
+        imageUrl: firebaseImg,
     },
     {
         rating: 6,
         heading: 'Selenium',
         subHeading: Categories.Automation,
-        imageUrl: '/src/assets/images/Selenium.png',
+        imageUrl: seleniumImg,
     },
     {
         rating: 7,
         heading: 'GitHub Actions',
         subHeading: Categories.Automation,
-        imageUrl: '/src/assets/images/GitHub Actions.png',
+        imageUrl: githubActionsImg,
     },
     {
         rating: 8,
         heading: 'Auth0',
         subHeading: Categories.SecurityTool,
-        imageUrl: '/src/assets/images/auth0.png',
+        imageUrl: auth0Img,
     },
     {
         rating: 7,
         heading: 'Google Analytics',
         subHeading: Categories.Analytics,
-        imageUrl: '/src/assets/images/analaytics.png',
+        imageUrl: analyticsImg,
     },
     {
         rating: 8,
         heading: 'Next.js',
         subHeading: Categories.FrontendFramework,
-        imageUrl: '/src/assets/images/Next.js.png',
+        imageUrl: nextImg,
     },
     {
         rating: 7,
         heading: 'Strapi',
         subHeading: Categories.CMS,
-        imageUrl: '/src/assets/images/strapi.png',
+        imageUrl: strapiImg,
     },
     {
         rating: 7,
         heading: 'Payload CMS',
         subHeading: Categories.CMS,
-        imageUrl: '/src/assets/images/payload.png',
+        imageUrl: payloadImg,
     },
     {
         rating: 6,
         heading: 'Netlify CMS',
         subHeading: Categories.CMS,
-        imageUrl: '/src/assets/images/netlify-cms.png',
+        imageUrl: netlifyCmsImg,
     },
     {
         rating: 9,
         heading: 'OpenAI',
         subHeading: Categories.AITool,
-        imageUrl: '/src/assets/images/openai.png',
+        imageUrl: openaiImg,
     },
     {
         rating: 8,
         heading: 'Eleven Labs',
         subHeading: Categories.AITool,
-        imageUrl: '/src/assets/images/elevenlabs.png',
+        imageUrl: elevenLabsImg,
     },
     {
         rating: 8,
         heading: 'NestJS',
         subHeading: Categories.BackendFramework,
-        imageUrl: '/src/assets/images/nestjs.png',
+        imageUrl: nestjsImg,
     },
     {
         rating: 9,
         heading: 'PostgreSQL',
         subHeading: Categories.Database,
-        imageUrl: '/src/assets/images/postgresql.png',
+        imageUrl: postgresqlImg,
     },
     {
         rating: 8,
         heading: 'Supabase',
         subHeading: Categories.BackendFramework,
-        imageUrl: '/src/assets/images/supabase.png',
+        imageUrl: supabaseImg,
     },
     {
         rating: 7,
         heading: 'FastAPI',
         subHeading: Categories.BackendFramework,
-        imageUrl: '/src/assets/images/fastapi.png',
+        imageUrl: fastapiImg,
     },
     {
         rating: 9,
         heading: 'Tailwind CSS',
         subHeading: Categories.Library,
-        imageUrl: '/src/assets/images/tailwind.png',
+        imageUrl: tailwindImg,
     },
 ];
