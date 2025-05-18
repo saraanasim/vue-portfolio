@@ -1,7 +1,10 @@
 <template>
     <div>
         <button title="Close" class="cyber-button" @click="showCloseModal">
-            <Icon icon="mdi:close" class="size-6 block" />
+            <template v-if="text">
+                {{ text }}
+            </template>
+            <Icon v-else icon="mdi:close" class="size-6 block" />
         </button>
 
         <!-- Close Modal -->
@@ -31,6 +34,12 @@ export default {
         Icon,
         BaseModal
     },
+    props: {
+        text: {
+            type: String,
+            default: ''
+        }
+    },
     data() {
         return {
             isCloseModalOpen: false
@@ -49,13 +58,17 @@ export default {
     background-color: transparent;
     color: #00E5FF;
     border: 1px solid #00E5FF;
-    width: 2.5rem;
+    min-width: 2.5rem;
     height: 2.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     transition: all 0.2s;
+    padding: 0 1rem;
+    font-family: monospace;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .cyber-button:hover {

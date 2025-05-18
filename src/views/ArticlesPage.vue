@@ -1,9 +1,8 @@
 <template>
     <SectionContainer title="/ARCHIVES/ARTICLES/LOG">
         <template #buttons>
-            <BaseButton :variant="ButtonVariants.TypeWriter" :isActive="true" @click="openConnectModal">Connect
-            </BaseButton>
-            <BaseButton :variant="ButtonVariants.TypeWriter" @click="downloadResumeFile">Download</BaseButton>
+            <ConnectButton />
+            <DownloadButton />
         </template>
         <div class="w-full h-full flex">
             <div class="h-full w-4 border-y-2 border-l-2 border-dimmest-text"></div>
@@ -101,20 +100,20 @@
         </div>
 
         <!-- Connect Modal -->
-        <ConnectModal v-model="isConnectModalOpen" />
     </SectionContainer>
 </template>
 
 <script lang="ts">
-import SectionContainer from '@/components/shared/SectionContainer.vue';
 import BaseButton from '@/components/shared/BaseButton.vue';
 import BaseDropdown, { type DropdownOption } from '@/components/shared/BaseDropdown.vue';
-import ConnectModal from '@/components/shared/ConnectModal.vue';
-import { ButtonVariants } from '@/utils/constants';
-import { Icon } from '@iconify/vue';
+import ConnectButton from '@/components/shared/ConnectButton.vue';
+import DownloadButton from '@/components/shared/DownloadButton.vue';
+import SectionContainer from '@/components/shared/SectionContainer.vue';
 import articlesData from '@/data/articles.json';
-import { ref, computed } from 'vue';
+import { ButtonVariants } from '@/utils/constants';
 import { downloadResume } from '@/utils/helpers';
+import { Icon } from '@iconify/vue';
+import { computed, ref } from 'vue';
 
 interface Article {
     id: number;
@@ -135,14 +134,14 @@ export default {
         SectionContainer,
         BaseButton,
         BaseDropdown,
-        ConnectModal,
+        ConnectButton,
+        DownloadButton,
         Icon
     },
     setup() {
         const articles = ref<Article[]>(articlesData as Article[]);
         const selectedTags = ref<string[]>([]);
         const isDropdownOpen = ref(false);
-        const isConnectModalOpen = ref(false);
 
         // Compute all unique tags from articles
         const uniqueTags = computed(() => {
@@ -233,11 +232,6 @@ export default {
             window.open(url, '_blank', 'noopener,noreferrer');
         };
 
-        // Open connect modal
-        const openConnectModal = () => {
-            isConnectModalOpen.value = true;
-        };
-
         // Download resume
         const downloadResumeFile = () => {
             downloadResume();
@@ -258,8 +252,6 @@ export default {
             selectedTagValues,
             selectedTagsDisplay,
             openArticleLink,
-            isConnectModalOpen,
-            openConnectModal,
             downloadResumeFile
         };
     }

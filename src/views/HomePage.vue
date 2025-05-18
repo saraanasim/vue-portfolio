@@ -1,9 +1,8 @@
 <template>
     <SectionContainer title="/ARCHIVES/ASSET/INFO">
         <template #buttons>
-            <BaseButton :variant="ButtonVariants.TypeWriter" :isActive="true" @click="openConnectModal">Connect
-            </BaseButton>
-            <BaseButton :variant="ButtonVariants.TypeWriter" @click="downloadResumeFile">Download</BaseButton>
+            <ConnectButton />
+            <DownloadButton />
         </template>
         <div class="w-full h-full flex ">
             <div class="h-full w-4 border-y-2 border-l-2 border-dimmest-text"></div>
@@ -23,46 +22,35 @@
             </div>
             <div class="h-full w-4 border-y-2 border-r-2 border-dimmest-text"></div>
         </div>
-
-        <!-- Connect Modal -->
-        <ConnectModal v-model="isConnectModalOpen" />
     </SectionContainer>
 </template>
 
 <script lang="ts">
 import AssetImage from '@/components/home/AssetImage.vue';
-import ConnectModal from '@/components/shared/ConnectModal.vue';
+import ConnectButton from '@/components/shared/ConnectButton.vue';
+import DownloadButton from '@/components/shared/DownloadButton.vue';
 import SectionContainer from '@/components/shared/SectionContainer.vue';
 import SelectableIconItem from '@/components/shared/SelectableIconItem.vue';
 import { lifecycleLoggerMixin } from '@/mixins/lifecycleLogger.mixin';
-import { ButtonVariants, TECHNOLOGIES } from '@/utils/constants';
-import { downloadResume } from '@/utils/helpers';
-import BaseButton from '../components/shared/BaseButton.vue';
+import { TECHNOLOGIES } from '@/utils/constants';
 import myImage from '@/assets/images/saraan-1.png';
+
 export default {
     name: "HomePage",
     components: {
         SectionContainer,
         AssetImage,
         SelectableIconItem,
-        BaseButton,
-        ConnectModal
+        ConnectButton,
+        DownloadButton
     },
     data() {
         return {
             TECHNOLOGIES,
-            ButtonVariants,
-            isConnectModalOpen: false,
             myImage
         };
     },
     methods: {
-        openConnectModal() {
-            this.isConnectModalOpen = true;
-        },
-        downloadResumeFile() {
-            downloadResume();
-        },
         navigateToProjectsWithTech(technology: string) {
             this.$router.push({
                 name: 'projects',

@@ -1,9 +1,8 @@
 <template>
     <SectionContainer title="/ARCHIVES/EXPERIMENTS/LOG">
         <template #buttons>
-            <BaseButton :variant="ButtonVariants.TypeWriter" :isActive="true" @click="openConnectModal">Connect
-            </BaseButton>
-            <BaseButton :variant="ButtonVariants.TypeWriter" @click="downloadResumeFile">Download</BaseButton>
+            <ConnectButton />
+            <DownloadButton />
         </template>
         <div class="w-full h-full flex">
             <div class="h-full w-4 border-y-2 border-l-2 border-dimmest-text"></div>
@@ -77,7 +76,7 @@
                                     <div class="card-tags">
                                         <span v-for="tag in experiment.tags.slice(0, 2)" :key="tag" class="card-tag">{{
                                             tag
-                                            }}</span>
+                                        }}</span>
                                         <span v-if="experiment.tags.length > 2" class="card-tag-more">+{{
                                             experiment.tags.length
                                             - 2 }}</span>
@@ -205,9 +204,6 @@
                 </button>
             </template>
         </BaseModal>
-
-        <!-- Connect Modal -->
-        <ConnectModal v-model="isConnectModalOpen" />
     </SectionContainer>
 </template>
 
@@ -217,7 +213,8 @@ import SectionContainer from '@/components/shared/SectionContainer.vue';
 import BaseButton from '@/components/shared/BaseButton.vue';
 import BaseModal from '@/components/shared/BaseModal.vue';
 import BaseDropdown, { type DropdownOption } from '@/components/shared/BaseDropdown.vue';
-import ConnectModal from '@/components/shared/ConnectModal.vue';
+import ConnectButton from '@/components/shared/ConnectButton.vue';
+import DownloadButton from '@/components/shared/DownloadButton.vue';
 import { ButtonVariants } from '@/utils/constants';
 import { Icon } from '@iconify/vue';
 import experimentsData from '@/data/experiments.json';
@@ -252,7 +249,8 @@ export default {
         BaseButton,
         BaseModal,
         BaseDropdown,
-        ConnectModal,
+        ConnectButton,
+        DownloadButton,
         Icon
     },
     setup() {
@@ -263,7 +261,6 @@ export default {
         const currentSlide = ref(0);
         const carouselRef = ref<HTMLElement | null>(null);
         const isDropdownOpen = ref(false);
-        const isConnectModalOpen = ref(false);
 
         // Compute all unique tags from experiments
         const uniqueTags = computed(() => {
@@ -380,16 +377,6 @@ export default {
             window.open(url, '_blank');
         };
 
-        // Open connect modal
-        const openConnectModal = () => {
-            isConnectModalOpen.value = true;
-        };
-
-        // Download resume
-        const downloadResumeFile = () => {
-            downloadResume();
-        };
-
         // Initialize page and set up event listeners
         onMounted(() => {
             // Auto-advance carousel
@@ -426,10 +413,7 @@ export default {
             tagDropdownOptions,
             handleTagSelect,
             selectedTechValues,
-            selectedTagsDisplay,
-            isConnectModalOpen,
-            openConnectModal,
-            downloadResumeFile
+            selectedTagsDisplay
         };
     }
 };

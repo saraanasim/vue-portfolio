@@ -21,12 +21,27 @@
                 </button>
             </div>
 
-            <nav class="sidebar-nav">
-                <BaseButton v-for="route in routes" :key="route.path" @click="navigateTo(route.path)"
-                    class="cyber-nav-button w-full text-left" :isActive="$route.path === route.path">
-                    {{ route.name }}
-                </BaseButton>
-            </nav>
+            <div class="sidebar-content-wrapper">
+                <div class="login-section">
+                    <LoginButton />
+                </div>
+
+                <nav class="sidebar-nav">
+                    <BaseButton v-for="route in routes" :key="route.path" @click="navigateTo(route.path)"
+                        class="cyber-nav-button w-full text-left" :isActive="$route.path === route.path">
+                        {{ route.name }}
+                    </BaseButton>
+                </nav>
+
+                <div class="action-buttons">
+                    <ConnectButton />
+                    <DownloadButton />
+                </div>
+
+                <div class="close-section">
+                    <CloseButton text="Terminate session" />
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -35,12 +50,20 @@
 import { Icon } from '@iconify/vue';
 import BaseButton from './BaseButton.vue';
 import { routesConfig } from '@/router';
+import LoginButton from './LoginButton.vue';
+import CloseButton from './CloseButton.vue';
+import ConnectButton from './ConnectButton.vue';
+import DownloadButton from './DownloadButton.vue';
 
 export default {
     name: 'MobileSidebar',
     components: {
         Icon,
-        BaseButton
+        BaseButton,
+        LoginButton,
+        CloseButton,
+        ConnectButton,
+        DownloadButton
     },
     props: {
         isOpen: {
@@ -128,11 +151,39 @@ export default {
     align-items: center;
 }
 
-.sidebar-nav {
+.sidebar-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 4rem);
+    /* Subtract header height */
     padding: 1rem;
+}
+
+.login-section {
+    margin-bottom: 2rem;
+}
+
+.sidebar-nav {
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.action-buttons {
+    margin-top: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-top: 1px solid rgba(0, 229, 255, 0.3);
+}
+
+.close-section {
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 229, 255, 0.3);
 }
 
 .cyber-button {

@@ -1,9 +1,8 @@
 <template>
     <SectionContainer title="/ARCHIVES/PROJECTS/INFO">
         <template #buttons>
-            <BaseButton :variant="ButtonVariants.TypeWriter" :isActive="true" @click="openConnectModal">Connect
-            </BaseButton>
-            <BaseButton :variant="ButtonVariants.TypeWriter" @click="downloadResumeFile">Download</BaseButton>
+            <ConnectButton />
+            <DownloadButton />
         </template>
         <div class="w-full h-full flex">
             <div class="h-full w-4 border-y-2 border-l-2 border-dimmest-text"></div>
@@ -31,7 +30,7 @@
                                     NAME
                                 </BaseButton>
                                 <span v-if="sortKey === 'name'" class="ml-1">{{ sortOrder === 'asc' ? '▲' : '▼'
-                                }}</span>
+                                    }}</span>
                             </div>
                             <div class="w-28 flex items-center">
                                 <BaseButton :variant="ButtonVariants.Flat" :isActive="sortKey === 'size'"
@@ -39,7 +38,7 @@
                                     SIZE
                                 </BaseButton>
                                 <span v-if="sortKey === 'size'" class="ml-1">{{ sortOrder === 'asc' ? '▲' : '▼'
-                                }}</span>
+                                    }}</span>
                             </div>
                             <div class="w-28 flex items-center">
                                 <BaseButton :variant="ButtonVariants.Flat" :isActive="sortKey === 'type'"
@@ -47,7 +46,7 @@
                                     TYPE
                                 </BaseButton>
                                 <span v-if="sortKey === 'type'" class="ml-1">{{ sortOrder === 'asc' ? '▲' : '▼'
-                                }}</span>
+                                    }}</span>
                             </div>
                         </div>
 
@@ -108,7 +107,7 @@
                         <div class="detail-value">
                             <a :href="selectedProject.githubUrl" target="_blank" class="link">{{
                                 selectedProject.githubUrl
-                                }}</a>
+                            }}</a>
                         </div>
                     </div>
                 </div>
@@ -150,9 +149,6 @@
                 <button class="action-btn" @click="isModalOpen = false">DISCONNECT</button>
             </template>
         </BaseModal>
-
-        <!-- Connect Modal -->
-        <ConnectModal v-model="isConnectModalOpen" />
     </SectionContainer>
 </template>
 
@@ -163,11 +159,11 @@ import BaseDropdown, { type DropdownOption } from '@/components/shared/BaseDropd
 import SectionContainer from '@/components/shared/SectionContainer.vue';
 import SelectableIconItem from '@/components/shared/SelectableIconItem.vue';
 import BaseModal from '@/components/shared/BaseModal.vue';
-import ConnectModal from '@/components/shared/ConnectModal.vue';
+import ConnectButton from '@/components/shared/ConnectButton.vue';
+import DownloadButton from '@/components/shared/DownloadButton.vue';
 import { lifecycleLoggerMixin } from '@/mixins/lifecycleLogger.mixin';
 import { ButtonVariants, TECHNOLOGIES } from '@/utils/constants';
 import projectsData from '@/data/projects.json';
-import { downloadResume } from '@/utils/helpers';
 
 interface Project {
     id: number;
@@ -191,7 +187,8 @@ export default {
         BaseButton,
         BaseDropdown,
         BaseModal,
-        ConnectModal,
+        ConnectButton,
+        DownloadButton
     },
     data() {
         return {
@@ -204,7 +201,6 @@ export default {
             sortOrder: 'asc',
             isModalOpen: false,
             selectedProject: null as Project | null,
-            isConnectModalOpen: false,
         };
     },
     created() {
@@ -299,12 +295,6 @@ export default {
         }
     },
     methods: {
-        openConnectModal() {
-            this.isConnectModalOpen = true;
-        },
-        downloadResumeFile() {
-            downloadResume();
-        },
         selectTechnology(technology: string) {
             const index = this.selectedTechs.indexOf(technology);
             if (index === -1) {
