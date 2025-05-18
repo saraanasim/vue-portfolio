@@ -1,6 +1,6 @@
 <template>
     <div class="cyber-container w-full h-full flex flex-col gap-4 px-2 sm:px-4">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-4">
+        <div class="hidden sm:grid grid-cols-1 lg:grid-cols-3 gap-4 mt-4">
             <div class="col-span-1 flex justify-center">
                 <TextLogo />
             </div>

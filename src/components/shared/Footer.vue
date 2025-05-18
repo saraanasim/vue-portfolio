@@ -1,9 +1,9 @@
 <template>
     <footer class="w-full bg-dark-bg text-cyan border-t-2 border-cyan py-4 cyber-footer">
-        <div class="max-w-7xl mx-auto flex justify-between items-center px-4 relative">
+        <div class="max-w-7xl mx-auto flex justify-center sm:justify-between items-center px-4 relative">
             <!-- Footer Left Section -->
             <div class="text-sm flex items-center space-x-4 font-mono">
-                <span class="font-semibold scanner-text">ACCESS TERMINAL</span>
+                <span class="font-semibold scanner-text hidden sm:block">ACCESS TERMINAL</span>
                 <span class="text-xs text-dim-text blink-slow">© 2024 | SECURE CONNECTION</span>
             </div>
 
@@ -13,7 +13,7 @@
             </div>
 
             <!-- Footer Right Section -->
-            <div class="text-xs text-dim-text font-mono border border-cyan p-2 cyber-terminal">
+            <div class="hidden sm:block text-xs text-dim-text font-mono border border-cyan p-2 cyber-terminal">
                 SYSTEM.STATUS = <span class="text-green-500 font-bold">ONLINE</span>
             </div>
         </div>

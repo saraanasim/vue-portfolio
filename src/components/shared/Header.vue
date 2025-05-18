@@ -59,13 +59,20 @@
         </div>
 
         <!-- Right Section: Minimize and Close Buttons -->
-        <div class="h-full flex items-center space-x-2">
+        <div class="h-full hidden md:flex items-center space-x-2">
             <MinimizeButton />
             <CloseButton />
         </div>
+
+        <!-- Right Section: Mobile -->
+        <div class="h-full flex md:hidden items-center space-x-2">
+            <button class="cyber-button lg:hidden" @click="toggleMobileSidebar">
+                <Icon icon="mdi:menu" class="size-6" />
+            </button>
+        </div>
     </header>
     <header
-        class="w-full h-16 flex gap-2 items-center justify-between p-3 bg-dark-secondary border-b-2 border-cyan text-dimmest-text">
+        class="w-full h-16 hidden sm:flex gap-2 items-center justify-between p-3 bg-dark-secondary border-b-2 border-cyan text-dimmest-text">
         <!-- Left Section: Access -->
         <div
             class="h-full w-fit px-2 md:px-4 lg:w-1/3 flex items-center gap-2 bg-dark-bg border border-cyan text-center font-bold text-xs md:text-sm font-mono">
@@ -74,7 +81,7 @@
             </p>
         </div>
 
-        <div class="hidden h-full flex-1 lg:flex">
+        <div class="hidden h-full flex-1 md:flex">
             <div class="w-fit flex gap-8 ml-8">
                 <BaseButton @click="navigateTo(routesConfig.HOME.path)" class="cyber-nav-button"
                     :isActive="$route.path === routesConfig.HOME.path">INFO</BaseButton>
@@ -93,9 +100,6 @@
 
         <!-- Right Section: Login and Logout Buttons -->
         <div class="h-full flex items-center gap-2 bg-dark-bg border border-cyan font-bold font-mono">
-            <button class="cyber-button lg:hidden" @click="toggleMobileSidebar">
-                <Icon icon="mdi:menu" class="size-6" />
-            </button>
             <LoginButton />
         </div>
     </header>
