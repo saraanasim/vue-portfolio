@@ -60,12 +60,8 @@
 
         <!-- Right Section: Minimize and Close Buttons -->
         <div class="h-full flex items-center space-x-2">
-            <button title="Minimize" class="cyber-button" @click="showMinimizeModal">
-                <Icon icon="mdi:window-minimize" class="size-6 block" />
-            </button>
-            <button title="Close" class="cyber-button" @click="showCloseModal">
-                <Icon icon="mdi:close" class="size-6 block" />
-            </button>
+            <MinimizeButton />
+            <CloseButton />
         </div>
     </header>
     <header
@@ -104,36 +100,6 @@
         </div>
     </header>
 
-    <!-- Minimize Modal -->
-    <BaseModal v-model="isMinimizeModalOpen" title="SYSTEM OVERRIDE" accessLevel="ADMIN">
-        <div class="modal-content-custom">
-            <div class="cyberpunk-alert">
-                <Icon icon="mdi:alert-octagon" class="alert-icon" />
-                <div class="message-text">
-                    <p class="blinking-text">SYSTEM NOTIFICATION:</p>
-                    <p>Minimize operation intercepted. This terminal cannot be minimized.</p>
-                    <p>Reason: Critical system functions active.</p>
-                    <p class="tech-text">SYS_CODE: 0x45FD2A</p>
-                </div>
-            </div>
-        </div>
-    </BaseModal>
-
-    <!-- Close Modal -->
-    <BaseModal v-model="isCloseModalOpen" title="TERMINAL ALERT" accessLevel="ADMIN">
-        <div class="modal-content-custom">
-            <div class="cyberpunk-alert">
-                <Icon icon="mdi:robot-dead" class="alert-icon" />
-                <div class="message-text">
-                    <p class="blinking-text">TERMINAL OVERRIDE:</p>
-                    <p>Close request denied. This terminal session is protected.</p>
-                    <p>Continue browsing with current access credentials.</p>
-                    <p class="tech-text">AUTH_LEVEL: VISITOR_ACCESS</p>
-                </div>
-            </div>
-        </div>
-    </BaseModal>
-
     <!-- MobileSidebar component -->
     <MobileSidebar v-model:isOpen="isMobileSidebarOpen" />
 </template>
@@ -142,11 +108,12 @@
 import { ButtonVariants, companyInfo } from '@/utils/constants';
 import { Icon } from '@iconify/vue';
 import BaseButton from './BaseButton.vue';
-import BaseModal from './BaseModal.vue';
 import { getFormattedDateTime } from '@/utils/helpers';
 import { routesConfig } from '@/router';
 import MobileSidebar from './MobileSidebar.vue';
 import LoginButton from './LoginButton.vue';
+import MinimizeButton from './MinimizeButton.vue';
+import CloseButton from './CloseButton.vue';
 
 const time = getFormattedDateTime('time')
 
@@ -155,9 +122,10 @@ export default {
     components: {
         Icon,
         BaseButton,
-        BaseModal,
         MobileSidebar,
-        LoginButton
+        LoginButton,
+        MinimizeButton,
+        CloseButton
     },
     data() {
         return {
@@ -165,8 +133,6 @@ export default {
             ButtonVariants,
             companyInfo,
             routesConfig,
-            isMinimizeModalOpen: false,
-            isCloseModalOpen: false,
             isMobileSidebarOpen: false,
         };
     },
@@ -174,12 +140,6 @@ export default {
         navigateTo(path: string) {
             console.log({ path })
             this.$router.push(path);
-        },
-        showMinimizeModal() {
-            this.isMinimizeModalOpen = true;
-        },
-        showCloseModal() {
-            this.isCloseModalOpen = true;
         },
         toggleMobileSidebar() {
             this.isMobileSidebarOpen = !this.isMobileSidebarOpen;
