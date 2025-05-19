@@ -8,7 +8,19 @@
     "description": "AI-based lawn measurements and sales tool with over 600 registered companies",
     "url": "https://deeplawn.com",
     "githubUrl": "https://github.com/saraanasim/deep-lawn",
-    "technologies": ["Next.js", "Nest.js", "AI", "Stripe"],
+    "technologies": [
+      "Next.js",
+      "Nest.js",
+      "JavaScript",
+      "TypeScript",
+      "Tailwind CSS",
+      "MongoDB",
+      "Stripe",
+      "OpenAI",
+      "AWS",
+      "Selenium",
+      "Node.js"
+    ],
     "image": "https://images.unsplash.com/photo-1589923188900-85dd9aca9dab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "paragraphs": [
       "AI-based lawn measurements and sales tool serving over 600 registered companies.",
@@ -25,7 +37,19 @@
     "description": "AI-driven research tool with real-time financial information and trading game",
     "url": "https://www.marketmakers.com",
     "githubUrl": "https://github.com/saraanasim/market-makers",
-    "technologies": ["MERN", "AI", "AWS"],
+    "technologies": [
+      "React",
+      "Express.js",
+      "MongoDB",
+      "Node.js",
+      "JavaScript",
+      "TypeScript",
+      "Tailwind CSS",
+      "AWS",
+      "OpenAI",
+      "Redux",
+      "Auth0"
+    ],
     "image": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "paragraphs": [
       "AI-driven research tool providing real-time financial information and algorithmic investment insights.",
@@ -42,7 +66,18 @@
     "description": "AI-based property measurements and instant quotes for cleaning companies",
     "url": "https://servicecart.io",
     "githubUrl": "https://github.com/saraanasim/service-cart",
-    "technologies": ["Next.js", "Nest.js", "AWS S3", "Card Connect API"],
+    "technologies": [
+      "Next.js",
+      "Nest.js",
+      "JavaScript",
+      "TypeScript",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "AWS S3",
+      "Stripe",
+      "Docker",
+      "GraphQL"
+    ],
     "image": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "paragraphs": [
       "Sister project of Deep Lawn focusing on AI-based property measurements for cleaning companies.",
@@ -59,7 +94,17 @@
     "description": "Tailored hybrid software program that performs as a business intelligence tool",
     "url": "https://www.dogwoodsuite.com",
     "githubUrl": "https://github.com/saraanasim/dogwood-analytics",
-    "technologies": ["React.js", "Firebase"],
+    "technologies": [
+      "React.js",
+      "Firebase",
+      "JavaScript",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "Google Analytics",
+      "Jest"
+    ],
     "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "paragraphs": [
       "A tailored hybrid software solution that serves as a comprehensive business intelligence tool.",
@@ -76,7 +121,18 @@
     "description": "Shipping and logistics platform for Taobao purchases",
     "url": "https://www.kghype.com",
     "githubUrl": "https://github.com/saraanasim/kghype",
-    "technologies": ["MERN"],
+    "technologies": [
+      "React",
+      "Express.js",
+      "Node.js",
+      "MongoDB",
+      "JavaScript",
+      "TypeScript",
+      "Tailwind CSS",
+      "Redux",
+      "Stripe",
+      "Docker"
+    ],
     "image": "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "paragraphs": [
       "Comprehensive shipping and logistics platform serving as a Taobao agent for international customers.",
@@ -93,7 +149,16 @@
     "description": "Online food ordering platform for a Pakistan-based company",
     "url": "https://readytomunch.com",
     "githubUrl": "https://github.com/saraanasim/ready-to-munch",
-    "technologies": ["React.js", "Firebase"],
+    "technologies": [
+      "React.js",
+      "Firebase",
+      "JavaScript",
+      "TypeScript",
+      "Tailwind CSS",
+      "Redux",
+      "Auth0",
+      "Google Maps API"
+    ],
     "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "paragraphs": [
       "Online food ordering platform developed for a Pakistan-based food delivery company.",
@@ -110,7 +175,15 @@
     "description": "Blog website for an India-based cloud solutions expert",
     "url": "https://sachcode.com",
     "githubUrl": "https://github.com/saraanasim/sachin-jha-blog",
-    "technologies": ["Gatsby.js", "Netlify CMS"],
+    "technologies": [
+      "Gatsby.js",
+      "Netlify CMS",
+      "JavaScript",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node.js",
+      "GraphQL"
+    ],
     "image": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "paragraphs": [
       "Blog website developed for an India-based cloud solutions expert to share technical knowledge.",
@@ -127,7 +200,15 @@
     "description": "Portfolio website for a US-based entrepreneur",
     "url": "https://davidsecul.com",
     "githubUrl": "https://github.com/saraanasim/david-secul",
-    "technologies": ["React.js"],
+    "technologies": [
+      "React.js",
+      "JavaScript",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "WordPress"
+    ],
     "image": "https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "paragraphs": [
       "Professional portfolio website for a US-based entrepreneur to showcase services and projects.",
@@ -144,7 +225,18 @@
     "description": "Portfolio website for a Denmark-based senior software tester",
     "url": "https://xsisec.com",
     "githubUrl": "https://github.com/saraanasim/xsisec",
-    "technologies": ["MERN"],
+    "technologies": [
+      "React",
+      "Express.js",
+      "Node.js",
+      "MongoDB",
+      "JavaScript",
+      "TypeScript",
+      "Tailwind CSS",
+      "Jest",
+      "Selenium",
+      "GitHub Actions"
+    ],
     "image": "https://images.unsplash.com/photo-1503437313881-503a91226402?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "paragraphs": [
       "Professional portfolio website for a Denmark-based senior software tester to showcase expertise.",
@@ -161,7 +253,18 @@
     "description": "Architecture-first intelligent code editor with AI integration",
     "url": "https://www.getvast.app/",
     "githubUrl": "https://github.com/saraanasim/vast-studio",
-    "technologies": ["Next.js", "TypeScript", "OpenAI", "Tailwind CSS"],
+    "technologies": [
+      "Next.js",
+      "JavaScript",
+      "TypeScript",
+      "Tailwind CSS",
+      "OpenAI",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Docker",
+      "AWS"
+    ],
     "image": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "paragraphs": [
       "Modern intelligent code editor that understands project requirements and automates code generation.",
@@ -178,7 +281,18 @@
     "description": "Travel social platform for sharing experiences and recommendations",
     "url": "https://triptalk.app/",
     "githubUrl": "https://github.com/saraanasim/triptalk",
-    "technologies": ["React", "Node.js", "MongoDB", "Google Maps API"],
+    "technologies": [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "JavaScript",
+      "TypeScript",
+      "Tailwind CSS",
+      "Google Maps API",
+      "Redux",
+      "Express.js",
+      "Auth0"
+    ],
     "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "paragraphs": [
       "Interactive social platform for travelers to share experiences, itineraries and destination recommendations.",
@@ -195,7 +309,15 @@
     "description": "Educational resource platform for UK-based Islamic organization",
     "url": "https://ilmuk.org/",
     "githubUrl": "https://github.com/saraanasim/ilm-uk",
-    "technologies": ["React", "JavaScript", "Firebase"],
+    "technologies": [
+      "React",
+      "JavaScript",
+      "TypeScript",
+      "Tailwind CSS",
+      "Firebase",
+      "Node.js",
+      "Payload CMS"
+    ],
     "image": "https://images.unsplash.com/photo-1577996693134-e05f5e0b7f38?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "paragraphs": [
       "Resource platform for UK-based Islamic educational organization providing learning materials and community resources.",
@@ -212,7 +334,18 @@
     "description": "Comprehensive platform for veterinary services and pet care management",
     "url": "https://premiervetalliance.com/",
     "githubUrl": "https://github.com/saraanasim/premier-vet",
-    "technologies": ["React", "Node.js", "PostgreSQL", "Stripe"],
+    "technologies": [
+      "React",
+      "Node.js",
+      "JavaScript",
+      "TypeScript",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "Stripe",
+      "Express.js",
+      "Auth0",
+      "Jest"
+    ],
     "image": "https://images.unsplash.com/photo-1548767797-d8c844163c4c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "paragraphs": [
       "Comprehensive platform for veterinary service providers with integrated financial and pet owner management tools.",
@@ -229,7 +362,17 @@
     "description": "Modern management application for nail salon businesses",
     "url": "https://dev.managenailshops.com",
     "githubUrl": "https://github.com/saraanasim/nail-shops",
-    "technologies": ["React", "Node.js", "MongoDB", "Google Analytics"],
+    "technologies": [
+      "React",
+      "Node.js",
+      "JavaScript",
+      "TypeScript",
+      "Tailwind CSS",
+      "MongoDB",
+      "Express.js",
+      "Google Analytics",
+      "Strapi"
+    ],
     "image": "https://images.unsplash.com/photo-1610297646747-55fdbf4e1b5f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "paragraphs": [
       "Streamlined management application for nail salon owners featuring detailed reporting and advanced analytics.",
@@ -246,7 +389,18 @@
     "description": "Podcast streaming and management platform with creator tools",
     "url": "https://d20nesg77htt3q.cloudfront.net/",
     "githubUrl": "https://github.com/saraanasim/podly",
-    "technologies": ["React", "Node.js", "AWS", "Eleven Labs"],
+    "technologies": [
+      "React",
+      "Node.js",
+      "JavaScript",
+      "TypeScript",
+      "Tailwind CSS",
+      "AWS",
+      "Eleven Labs",
+      "MongoDB",
+      "Express.js",
+      "OpenAI"
+    ],
     "image": "https://images.unsplash.com/photo-1589903308904-1010c2294adc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "paragraphs": [
       "Innovative podcast platform with streaming capabilities and advanced tools for content creators.",
@@ -263,7 +417,16 @@
     "description": "Interactive language learning tool for Portuguese grammar practice",
     "url": "http://13.48.239.202:5173/",
     "githubUrl": "https://github.com/saraanasim/portuguese-grammar",
-    "technologies": ["Vue.js", "JavaScript", "FastAPI", "AWS"],
+    "technologies": [
+      "Vue.js",
+      "JavaScript",
+      "TypeScript",
+      "Tailwind CSS",
+      "FastAPI",
+      "AWS",
+      "Python",
+      "Supabase"
+    ],
     "image": "https://images.unsplash.com/photo-1546704864-07236eba606e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "paragraphs": [
       "Educational application providing interactive exercises and lessons for Portuguese language learners.",

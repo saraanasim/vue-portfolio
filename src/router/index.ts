@@ -14,7 +14,7 @@ const routesConfig: Record<'HOME' | 'PROJECTS' | 'EXPERIMENTS' | 'ARTICLES', Rou
         name: 'home',
         component: HomePage,
         meta: {
-            title: 'Home Page',
+            title: 'Saraan Asim',
             layout: 'DefaultLayout',
             middleware: [layoutMiddleware]
         }
@@ -24,7 +24,7 @@ const routesConfig: Record<'HOME' | 'PROJECTS' | 'EXPERIMENTS' | 'ARTICLES', Rou
         name: 'projects',
         component: ProjectsPage,
         meta: {
-            title: 'Projects Page',
+            title: 'Saraan Asim | Projects',
             layout: 'DefaultLayout',
             middleware: [layoutMiddleware]
         }
@@ -34,7 +34,7 @@ const routesConfig: Record<'HOME' | 'PROJECTS' | 'EXPERIMENTS' | 'ARTICLES', Rou
         name: 'experiments',
         component: ExperimentsPage,
         meta: {
-            title: 'Experiments Page',
+            title: 'Saraan Asim | Experiments',
             layout: 'DefaultLayout',
             middleware: [layoutMiddleware]
         }
@@ -44,7 +44,7 @@ const routesConfig: Record<'HOME' | 'PROJECTS' | 'EXPERIMENTS' | 'ARTICLES', Rou
         name: 'articles',
         component: ArticlesPage,
         meta: {
-            title: 'Articles Page',
+            title: 'Saraan Asim | Articles',
             layout: 'DefaultLayout',
             middleware: [layoutMiddleware]
         }
