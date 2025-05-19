@@ -30,7 +30,7 @@
                                     NAME
                                 </BaseButton>
                                 <span v-if="sortKey === 'name'" class="ml-1">{{ sortOrder === 'asc' ? '▲' : '▼'
-                                }}</span>
+                                    }}</span>
                             </div>
                             <div class="w-28 flex items-center">
                                 <BaseButton :variant="ButtonVariants.Flat" :isActive="sortKey === 'size'"
@@ -38,7 +38,7 @@
                                     SIZE
                                 </BaseButton>
                                 <span v-if="sortKey === 'size'" class="ml-1">{{ sortOrder === 'asc' ? '▲' : '▼'
-                                }}</span>
+                                    }}</span>
                             </div>
                             <div class="w-28 flex items-center">
                                 <BaseButton :variant="ButtonVariants.Flat" :isActive="sortKey === 'type'"
@@ -46,7 +46,7 @@
                                     TYPE
                                 </BaseButton>
                                 <span v-if="sortKey === 'type'" class="ml-1">{{ sortOrder === 'asc' ? '▲' : '▼'
-                                }}</span>
+                                    }}</span>
                             </div>
                         </div>
 
@@ -102,12 +102,12 @@
                             <a :href="selectedProject.url" target="_blank" class="link">{{ selectedProject.url }}</a>
                         </div>
                     </div>
-                    <div class="detail-row">
+                    <div v-if="selectedProject.githubUrl && selectedProject.githubUrl.length > 0" class="detail-row">
                         <div class="detail-label">GITHUB:</div>
                         <div class="detail-value">
                             <a :href="selectedProject.githubUrl" target="_blank" class="link">{{
                                 selectedProject.githubUrl
-                                }}</a>
+                            }}</a>
                         </div>
                     </div>
                 </div>

@@ -7,7 +7,7 @@
     "icon": "folder",
     "description": "AI-based lawn measurements and sales tool with over 600 registered companies",
     "url": "https://deeplawn.com",
-    "githubUrl": "https://github.com/saraanasim/deep-lawn",
+    "githubUrl": "",
     "technologies": [
       "Next.js",
       "Nest.js",
@@ -36,7 +36,7 @@
     "icon": "folder",
     "description": "AI-driven research tool with real-time financial information and trading game",
     "url": "https://www.marketmakers.com",
-    "githubUrl": "https://github.com/saraanasim/market-makers",
+    "githubUrl": "",
     "technologies": [
       "React",
       "Express.js",
@@ -65,7 +65,7 @@
     "icon": "folder",
     "description": "AI-based property measurements and instant quotes for cleaning companies",
     "url": "https://servicecart.io",
-    "githubUrl": "https://github.com/saraanasim/service-cart",
+    "githubUrl": "",
     "technologies": [
       "Next.js",
       "Nest.js",
@@ -93,7 +93,7 @@
     "icon": "folder",
     "description": "Tailored hybrid software program that performs as a business intelligence tool",
     "url": "https://www.dogwoodsuite.com",
-    "githubUrl": "https://github.com/saraanasim/dogwood-analytics",
+    "githubUrl": "",
     "technologies": [
       "React.js",
       "Firebase",
@@ -120,7 +120,7 @@
     "icon": "folder",
     "description": "Shipping and logistics platform for Taobao purchases",
     "url": "https://www.kghype.com",
-    "githubUrl": "https://github.com/saraanasim/kghype",
+    "githubUrl": "",
     "technologies": [
       "React",
       "Express.js",
@@ -148,7 +148,7 @@
     "icon": "folder",
     "description": "Online food ordering platform for a Pakistan-based company",
     "url": "https://readytomunch.com",
-    "githubUrl": "https://github.com/saraanasim/ready-to-munch",
+    "githubUrl": "",
     "technologies": [
       "React.js",
       "Firebase",
@@ -174,7 +174,7 @@
     "icon": "folder",
     "description": "Blog website for an India-based cloud solutions expert",
     "url": "https://sachcode.com",
-    "githubUrl": "https://github.com/saraanasim/sachin-jha-blog",
+    "githubUrl": "",
     "technologies": [
       "Gatsby.js",
       "Netlify CMS",
@@ -199,7 +199,7 @@
     "icon": "folder",
     "description": "Portfolio website for a US-based entrepreneur",
     "url": "https://davidsecul.com",
-    "githubUrl": "https://github.com/saraanasim/david-secul",
+    "githubUrl": "",
     "technologies": [
       "React.js",
       "JavaScript",
@@ -224,7 +224,7 @@
     "icon": "folder",
     "description": "Portfolio website for a Denmark-based senior software tester",
     "url": "https://xsisec.com",
-    "githubUrl": "https://github.com/saraanasim/xsisec",
+    "githubUrl": "",
     "technologies": [
       "React",
       "Express.js",
@@ -252,7 +252,7 @@
     "icon": "folder",
     "description": "Architecture-first intelligent code editor with AI integration",
     "url": "https://www.getvast.app/",
-    "githubUrl": "https://github.com/saraanasim/vast-studio",
+    "githubUrl": "",
     "technologies": [
       "Next.js",
       "JavaScript",
@@ -280,7 +280,7 @@
     "icon": "folder",
     "description": "Travel social platform for sharing experiences and recommendations",
     "url": "https://triptalk.app/",
-    "githubUrl": "https://github.com/saraanasim/triptalk",
+    "githubUrl": "",
     "technologies": [
       "React",
       "Node.js",
@@ -308,7 +308,7 @@
     "icon": "folder",
     "description": "Educational resource platform for UK-based Islamic organization",
     "url": "https://ilmuk.org/",
-    "githubUrl": "https://github.com/saraanasim/ilm-uk",
+    "githubUrl": "",
     "technologies": [
       "React",
       "JavaScript",
@@ -333,7 +333,7 @@
     "icon": "folder",
     "description": "Comprehensive platform for veterinary services and pet care management",
     "url": "https://premiervetalliance.com/",
-    "githubUrl": "https://github.com/saraanasim/premier-vet",
+    "githubUrl": "",
     "technologies": [
       "React",
       "Node.js",
@@ -361,7 +361,7 @@
     "icon": "folder",
     "description": "Modern management application for nail salon businesses",
     "url": "https://dev.managenailshops.com",
-    "githubUrl": "https://github.com/saraanasim/nail-shops",
+    "githubUrl": "",
     "technologies": [
       "React",
       "Node.js",
@@ -388,7 +388,7 @@
     "icon": "folder",
     "description": "Podcast streaming and management platform with creator tools",
     "url": "https://d20nesg77htt3q.cloudfront.net/",
-    "githubUrl": "https://github.com/saraanasim/podly",
+    "githubUrl": "",
     "technologies": [
       "React",
       "Node.js",
@@ -416,7 +416,7 @@
     "icon": "folder",
     "description": "Interactive language learning tool for Portuguese grammar practice",
     "url": "http://13.48.239.202:5173/",
-    "githubUrl": "https://github.com/saraanasim/portuguese-grammar",
+    "githubUrl": "",
     "technologies": [
       "Vue.js",
       "JavaScript",

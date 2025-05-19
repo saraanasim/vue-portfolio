@@ -145,22 +145,6 @@
                                 <div class="info-label">DATE</div>
                                 <div class="info-value">{{ selectedExperiment.date }}</div>
                             </div>
-                            <div class="info-item">
-                                <div class="info-label">GITHUB</div>
-                                <div class="info-value">
-                                    <a :href="selectedExperiment.github_url" target="_blank" class="info-link">
-                                        {{ selectedExperiment.github_url.split('/').slice(-2).join('/') }}
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="info-item">
-                                <div class="info-label">LIVE DEMO</div>
-                                <div class="info-value">
-                                    <a :href="selectedExperiment.live_url" target="_blank" class="info-link">
-                                        {{ selectedExperiment.live_url.replace(/^https?:\/\//, '') }}
-                                    </a>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
@@ -195,10 +179,6 @@
             </div>
 
             <template #footer-buttons>
-                <button class="action-btn view-btn" v-if="selectedExperiment"
-                    @click="openExperimentUrl(selectedExperiment.live_url)">
-                    VIEW EXPERIMENT
-                </button>
                 <button class="action-btn close-btn" @click="isModalOpen = false">
                     CLOSE
                 </button>
@@ -372,11 +352,6 @@ export default {
             currentSlide.value = index;
         };
 
-        // Open experiment URL in new tab
-        const openExperimentUrl = (url: string) => {
-            window.open(url, '_blank');
-        };
-
         // Initialize page and set up event listeners
         onMounted(() => {
             // Auto-advance carousel
@@ -407,7 +382,6 @@ export default {
             nextSlide,
             prevSlide,
             goToSlide,
-            openExperimentUrl,
             ButtonVariants,
             isDropdownOpen,
             tagDropdownOptions,
